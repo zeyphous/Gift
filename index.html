@@ -665,6 +665,15 @@
         .mini-bear .bear-scene { flex: none; margin-bottom: 0; transform: scale(0.58); transform-origin: top center; }
         .story .bear-message { text-align: center; margin-top: 0; }
 
+        /* ---------- Hindi pages (8 & 9): romanised Hindi, so no hyphenation / justify ---------- */
+        .story.hindi { padding-top: 60px; }                 /* clears the music button */
+        .hindi .letter-body { text-align: left; hyphens: none; font-size: 17px; line-height: 1.85; }
+        .hindi .letter-body p { margin-bottom: 16px; }
+        .hindi-intro { text-align: center; font-style: italic; font-size: 18px; line-height: 1.7; color: #5e4a5e; }
+        .hindi-intro .flower { font-style: normal; }
+        .goodbye { text-wrap: balance; text-align: center; margin-top: 8px; font-style: italic; font-size: 18px; line-height: 1.75; color: #6a1b9a; }
+        .goodbye .bye { display: block; font-family: var(--script); font-style: normal; font-size: 34px; color: #7b1fa2; margin-bottom: 6px; }
+
         /* Hover effects only on devices that can really hover (avoids "sticky hover" on touch) */
         @media (hover: hover) {
             .lock-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(156, 39, 176, 0.3); }
@@ -984,12 +993,101 @@
                     <p class="letter-signature">Secret</p>
                 </div>
             </section>
+
+            <!-- PAGE 8: In Hindi, part one -->
+            <section class="page story hindi" id="page8h" lang="hi-Latn">
+                <div class="corner tl"></div><div class="corner tr"></div>
+
+                <div class="hindi-intro reveal">
+                    <div class="flower">✧</div>
+                    <p>
+                        I have a bit to say. I cannot express these feelings properly in English,
+                        so let me tell them in Hindi.
+                    </p>
+                </div>
+
+                <div class="cover-divider"></div>
+
+                <div class="letter-body reveal" style="--d:.2s">
+                    <p>
+                        Aaj ka din mere liye bhi thoda khaas hai, kyunki aaj us insaan ka janamdin hai
+                        jiske liye mere dil mein hamesha ek alag si jagah rahegi. 🌷
+                    </p>
+                    <p>
+                        Tum zindagi ka woh hissa ho jise shayad main kabhi lafzon mein poori tarah bayan
+                        nahi kar sakta. Woh chhote-chhote conversations, random baatein aur woh simple se
+                        moments aaj bhi yaad hain. Shayad tab ehsaas nahi tha, lekin aaj samajh aata hai
+                        ki woh waqt kitna khoobsurat tha.
+                    </p>
+                    <p>
+                        Waqt ke saath sab kuch badal gaya. Baatein kam ho gayi, raaste alag ho gaye, aur
+                        zindagi apni raftaar se aage badhne lagi. Lekin kuch yaadein aisi hoti hain jo
+                        waqt ke saath bhi apni jagah nahi khoti.
+                    </p>
+                    <p>
+                        Tumhari A+ ki khabar sunkar jo khushi hui thi, woh bhi unhi yaadon mein se ek hai.
+                        Dil se khushi hui thi ki tumhari mehnat rang laayi. I hope tum aage bhi isi tarah
+                        apne sapno ki taraf badhti raho.
+                    </p>
+                </div>
+            </section>
+
+            <!-- PAGE 9: In Hindi, part two + goodbye -->
+            <section class="page story hindi" id="page9h" lang="hi-Latn">
+                <div class="corner tl"></div><div class="corner tr"></div>
+
+                <div class="letter-body reveal">
+                    <p>
+                        Aaj tumhare birthday par bas itni si dua hai ki Allah tumhari zindagi ko khushiyon
+                        se bhar de. Tumhari har dua qubool ho, har manzil tumhe mile aur tum jis cheez ke
+                        liye mehnat karo, usmein kamyabi haasil karo. 🤍
+                    </p>
+                    <p>
+                        Hamesha khush rehna, muskurate rehna aur apni woh khoobsurat si personality kabhi
+                        mat khona. Zindagi mein chahe kitne bhi naye mod aayein, umeed hai tum har mod par
+                        pehle se zyada mazboot bano.
+                    </p>
+                    <p>
+                        Aur haan, kuch logon ko roz yaad karna zaroori nahi hota. Kuch yaadein bas dil mein
+                        apni ek jagah bana leti hain. Tum bhi unhi khoobsurat yaadon mein se ek ho.
+                    </p>
+                    <p>
+                        Shayad mere paas kehne ke liye aur bhi bahut kuch hai, lekin har baat lafzon mein
+                        kehna zaroori nahi hota.
+                    </p>
+                    <p>
+                        Bas itna chahta hoon ki tumhari zindagi mein kabhi khushiyon ki kami na ho. Tum
+                        hamesha apne aap par fakhr kar sako aur ek aisi zindagi jiyo jismein tum khud ko
+                        khush pao.
+                    </p>
+                    <p>
+                        Once again, Happy Birthday, Fluffy! 🎂🌷
+                    </p>
+                    <p>
+                        Khush raho, muskurati raho aur hamesha aage badhti raho.
+                    </p>
+                </div>
+
+                <div class="cover-divider"></div>
+
+                <div class="goodbye reveal" style="--d:.3s">
+                    <span class="bye">Goodbye, for now</span>
+                    Take care of yourself, Fluffy.
+                    May your days be soft, your smile stay bright,
+                    and your heart always feel light. ✨
+                </div>
+
+                <div class="letter-closing reveal" style="--d:.45s">
+                    <p>With warm regards,</p>
+                    <p class="letter-signature">Secret</p>
+                </div>
+            </section>
         </div>
 
         <!-- Navigation -->
         <nav class="nav" id="nav" hidden>
             <button type="button" class="nav-btn" id="prevBtn" disabled aria-label="Previous page">← Previous</button>
-            <span class="page-indicator" id="pageIndicator" aria-live="polite">1 / 7</span>
+            <span class="page-indicator" id="pageIndicator" aria-live="polite">1 / 9</span>
             <button type="button" class="nav-btn" id="nextBtn" aria-label="Next page">Next →</button>
         </nav>
     </main>

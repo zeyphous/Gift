@@ -300,17 +300,7 @@
         }
         .no-btn.gone { display: none; }
 
-        /* ---------- Bear page ---------- */
-        .bear-page {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding-bottom: 20px;
-        }
-
+        /* ---------- Bear ---------- */
         .bear-scene { position: relative; width: 220px; height: 240px; margin-bottom: 30px; }
 
         .balloons {
@@ -647,6 +637,26 @@
             transform: rotate(45deg);
         }
 
+        /* ---------- Long story pages (7 & 8): content scrolls inside the card ---------- */
+        .story { justify-content: flex-start; }
+        .story > * { flex-shrink: 0; }
+        .story .cover-divider { margin: 26px auto; }
+        .story .chapter-title { font-size: 22px; margin-bottom: 16px; }
+        .story .chapter-title.center { text-align: center; margin: 26px 0 12px; }   /* clears the music button */
+        .story .chapter-body { flex: none; font-size: 16.5px; line-height: 1.8; }
+        .story .chapter-body p { margin-bottom: 14px; }
+
+        .recap-head { text-align: center; }
+        .recap-title { font-family: var(--script); font-size: 44px; font-weight: 400; color: #7b1fa2; margin-bottom: 6px; text-shadow: 0 2px 10px rgba(156, 39, 176, 0.15); }
+        .recap-head .cover-subtitle { font-size: 14px; margin-bottom: 12px; }
+        .recap-head .cover-quote { margin: 22px auto 0; font-size: 16px; }
+        .recap-tag { margin-top: 18px; font-size: 15px; color: #8e6a9a; line-height: 1.6; }
+        .recap-ask { margin-top: 12px; font-family: var(--display); font-size: 17px; color: #6a1b9a; line-height: 1.5; }
+
+        .mini-bear { height: 140px; display: flex; justify-content: center; }
+        .mini-bear .bear-scene { flex: none; margin-bottom: 0; transform: scale(0.58); transform-origin: top center; }
+        .story .bear-message { text-align: center; margin-top: 0; }
+
         /* Hover effects only on devices that can really hover (avoids "sticky hover" on touch) */
         @media (hover: hover) {
             .lock-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(156, 39, 176, 0.3); }
@@ -785,43 +795,7 @@
                 </div>
             </section>
 
-            <!-- PAGE 5: Cute Bear Surprise -->
-            <section class="page" id="page5">
-                <div class="corner tl"></div><div class="corner tr"></div>
-
-                <div class="bear-page reveal" style="--d:.1s">
-                    <div class="bear-scene">
-                        <div class="balloons">
-                            <div class="balloon pink"></div>
-                            <div class="balloon purple"></div>
-                            <div class="balloon lavender"></div>
-                        </div>
-
-                        <div class="bear">
-                            <div class="bear-head">
-                                <div class="bear-ear left"></div>
-                                <div class="bear-ear right"></div>
-                                <div class="bear-face">
-                                    <div class="bear-eye left"></div>
-                                    <div class="bear-eye right"></div>
-                                    <div class="bear-nose"></div>
-                                    <div class="bear-mouth"></div>
-                                </div>
-                            </div>
-                            <div class="bear-body"></div>
-                            <div class="bear-arm left"><div class="bear-paw"></div></div>
-                            <div class="bear-arm right"><div class="bear-paw"></div></div>
-                        </div>
-                    </div>
-
-                    <div class="bear-message">
-                        Someone sent a little bear<br>to wish you Happy Birthday!
-                        <span>Hope it made you smile a little ✨</span>
-                    </div>
-                </div>
-            </section>
-
-            <!-- PAGE 6: Final Letter -->
+            <!-- PAGE 5: Letter (part one) -->
             <section class="page" id="page6">
                 <div class="corner tl"></div><div class="corner tr"></div>
 
@@ -848,11 +822,152 @@
                         I hope you keep becoming someone you’re proud of.
                     </p>
                     <p>
-                        That’s all I wanted to say.
+                        I have a bit more to say to you…
                     </p>
                 </div>
 
-                <div class="photo-gallery reveal" style="--d:.35s">
+
+                <div class="letter-closing reveal" style="--d:.45s">
+                    <p>With quiet warmth,</p>
+                    <p class="letter-signature">secret</p>
+                </div>
+            </section>
+
+            <!-- PAGE 6: Story, part one -->
+            <section class="page story" id="page7">
+                <div class="corner tl"></div><div class="corner tr"></div>
+
+                <div class="recap-head reveal">
+                    <div class="flower">✧</div>
+                    <h2 class="recap-title">For Fluffy</h2>
+                    <p class="cover-subtitle">A Quiet Little Story</p>
+                    <p class="cover-date">14 November</p>
+                    <p class="cover-quote">
+                        “Some people become beautiful memories,
+                        even when life takes them in different directions.”
+                    </p>
+                    <p class="recap-tag">A little story, a few memories, and a birthday wish.</p>
+                    <p class="recap-ask">Are you curious to see what’s next?</p>
+                </div>
+
+                <div class="cover-divider"></div>
+
+                <div class="chapter-number reveal" style="--d:.15s">Chapter One</div>
+                <h2 class="chapter-title reveal" style="--d:.2s">The Days That Felt Easy</h2>
+                <div class="chapter-body reveal" style="--d:.25s">
+                    <p>
+                        There was a time when conversations came naturally between us.
+                        Little things, random stories, everyday moments — somehow,
+                        even the simplest conversations felt special.
+                    </p>
+                    <p>
+                        Somewhere in 2024, those little conversations became a familiar part of my days.
+                    </p>
+                    <p>
+                        Nothing extraordinary, perhaps. Just two people sharing pieces of their everyday lives.
+                    </p>
+                    <p>
+                        Looking back, I realise that some of the simplest moments
+                        become the ones we remember the longest.
+                    </p>
+                </div>
+
+                <div class="cover-divider"></div>
+
+                <div class="chapter-number">Chapter Two</div>
+                <h2 class="chapter-title">When the Pages Turned</h2>
+                <div class="chapter-body">
+                    <p>
+                        Eventually, life started moving in different directions.
+                    </p>
+                    <p>
+                        With SSC approaching, priorities changed, and the daily conversations
+                        slowly became less frequent.
+                    </p>
+                    <p>
+                        Sometimes, stepping back is simply part of growing up. Not every meaningful
+                        connection has to remain the same to be remembered fondly.
+                    </p>
+                    <p>
+                        And then came the news of your A+.
+                    </p>
+                    <p>
+                        I was genuinely happy to know that your hard work had paid off.
+                        Some achievements deserve to be celebrated, even from a distance.
+                    </p>
+                </div>
+            </section>
+
+            <!-- PAGE 7: Story, part two -->
+            <section class="page story" id="page8">
+                <div class="corner tl"></div><div class="corner tr"></div>
+
+                <h2 class="chapter-title center reveal">A Little Birthday Surprise</h2>
+
+                <div class="mini-bear reveal" style="--d:.1s">
+                    <div class="bear-scene">
+                        <div class="balloons">
+                            <div class="balloon pink"></div>
+                            <div class="balloon purple"></div>
+                            <div class="balloon lavender"></div>
+                        </div>
+                        <div class="bear">
+                            <div class="bear-head">
+                                <div class="bear-ear left"></div>
+                                <div class="bear-ear right"></div>
+                                <div class="bear-face">
+                                    <div class="bear-eye left"></div>
+                                    <div class="bear-eye right"></div>
+                                    <div class="bear-nose"></div>
+                                    <div class="bear-mouth"></div>
+                                </div>
+                            </div>
+                            <div class="bear-body"></div>
+                            <div class="bear-arm left"><div class="bear-paw"></div></div>
+                            <div class="bear-arm right"><div class="bear-paw"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bear-message reveal" style="--d:.2s">
+                    Someone sent a little bear!
+                    <span>A tiny bear, carrying a simple wish for someone who deserves a lovely day.</span>
+                    <span>Hope this little surprise brings a smile to your face. ✨</span>
+                </div>
+
+                <div class="cover-divider"></div>
+
+                <div class="letter-header reveal" style="--d:.3s">
+                    <h2>Dear Fluffy</h2>
+                    <p class="letter-date">14 November</p>
+                </div>
+
+                <div class="letter-body reveal" style="--d:.35s">
+                    <p>Happy Birthday.</p>
+                    <p>
+                        I hope this year is kinder to you than the last.
+                        I hope the stories you read keep giving you new worlds,
+                        and that the real one treats you gently too.
+                    </p>
+                    <p>
+                        I’m proud of the way you chose focus when it mattered.
+                        Getting that A+ wasn’t just a result — it was a quiet kind of strength.
+                    </p>
+                    <p>
+                        I hope you keep discovering new things, chasing your dreams,
+                        and finding happiness in the little moments that make life beautiful.
+                    </p>
+                    <p>
+                        Wherever life takes you from here,
+                        I hope you keep becoming someone you’re proud of.
+                    </p>
+                    <p>
+                        Some memories are simply worth keeping, without expecting anything in return.
+                    </p>
+                    <p>That’s all I wanted to say.</p>
+                </div>
+
+                <div class="photo-gallery reveal" style="--d:.4s">
                     <div class="photo-frame">
                         <img src="images/fluffy.jpg" alt="Fluffy" width="360" height="480" decoding="async">
                     </div>
@@ -860,7 +975,7 @@
 
                 <div class="letter-closing reveal" style="--d:.45s">
                     <p>With quiet warmth,</p>
-                    <p class="letter-signature">secret</p>
+                    <p class="letter-signature">Secret</p>
                 </div>
             </section>
         </div>
@@ -868,7 +983,7 @@
         <!-- Navigation -->
         <nav class="nav" id="nav" hidden>
             <button type="button" class="nav-btn" id="prevBtn" disabled aria-label="Previous page">← Previous</button>
-            <span class="page-indicator" id="pageIndicator" aria-live="polite">1 / 6</span>
+            <span class="page-indicator" id="pageIndicator" aria-live="polite">1 / 7</span>
             <button type="button" class="nav-btn" id="nextBtn" aria-label="Next page">Next →</button>
         </nav>
     </main>

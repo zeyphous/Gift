@@ -1,1272 +1,1083 @@
 <!DOCTYPE html>
-<html lang="en" class="dark scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BTS Anthology — Crafted With Love</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Romantic & Elegant Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Great+Vibes&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        violet: {
-                            950: '#080511',
-                            900: '#110922',
-                            800: '#1d1038',
-                            700: '#321a5a',
-                            600: '#4e2888',
-                            500: '#7038be',
-                            400: '#975be6',
-                            300: '#c08cf8',
-                            200: '#e0c0fe',
-                            100: '#f3e8ff',
-                        },
-                        roseGlow: '#f43f5e',
-                        slateDark: '#06070a',
-                        glassBorder: 'rgba(224, 192, 254, 0.18)',
-                    },
-                    fontFamily: {
-                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-                        serif: ['"Cormorant Garamond"', 'serif'],
-                        script: ['"Great Vibes"', 'cursive'],
-                        mono: ['"Space Grotesk"', 'monospace']
-                    }
-                }
-            }
-        }
-    </script>
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#e1bee7">
+    <meta name="robots" content="noindex, nofollow">
+    <title>For Fluffy — 14 November</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Great+Vibes&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+
     <style>
+        :root {
+            --pattern: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ce93d8' fill-opacity='0.13'%3E%3Cpath d='M50 20c4.5 8 12 12 20 12s15.5-4 20-12c-4.5 8-12 12-20 12s-15.5-4-20-12z'/%3E%3Cpath d='M20 50c8 4.5 12 12 12 20s-4 15.5-12 20c8-4.5 12-12 12-20s-4-15.5-12-20z'/%3E%3Cpath d='M80 50c-8 4.5-12 12-12 20s4 15.5 12 20c-8-4.5-12-12-12-20s4-15.5 12-20z'/%3E%3Cpath d='M50 80c-4.5-8-12-12-20-12s-15.5 4-20 12c4.5-8 12-12 20-12s15.5 4 20 12z'/%3E%3Ccircle cx='50' cy='50' r='6'/%3E%3C/g%3E%3C/svg%3E");
+            --ease: cubic-bezier(0.4, 0, 0.2, 1);
+            --serif: 'Cormorant Garamond', Georgia, serif;
+            --display: 'Playfair Display', Georgia, serif;
+            --script: 'Great Vibes', cursive;
+        }
+
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        [hidden] { display: none !important; }
+
+        html { -webkit-text-size-adjust: 100%; overflow: hidden; height: 100%; }
+
         body {
-            background-color: #06070a;
-            background-image: 
-                radial-gradient(at 0% 0%, rgba(112, 56, 190, 0.25) 0px, transparent 50%),
-                radial-gradient(at 100% 100%, rgba(29, 16, 56, 0.35) 0px, transparent 50%),
-                radial-gradient(at 50% 50%, rgba(78, 40, 136, 0.15) 0px, transparent 60%);
-            color: #f3e8ff;
-            min-height: 100vh;
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            overflow-x: hidden;
-        }
-
-        .font-romantic-heading {
-            font-family: 'Cormorant Garamond', serif;
-            letter-spacing: 0.02em;
-        }
-
-        .font-script-accent {
-            font-family: 'Great Vibes', cursive;
-        }
-
-        /* Glassmorphism Styling */
-        .glass-panel {
-            background: rgba(17, 9, 34, 0.65);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(224, 192, 254, 0.18);
-        }
-
-        .glass-panel-hover {
-            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .glass-panel-hover:hover {
-            transform: translateY(-5px) scale(1.01);
-            background: rgba(29, 16, 56, 0.75);
-            border-color: rgba(224, 192, 254, 0.4);
-            box-shadow: 0 20px 45px -15px rgba(112, 56, 190, 0.4);
-        }
-
-        /* Floating Chibi Background Particles */
-        .chibi-container {
-            position: fixed;
-            top: 0;
-            left: 0;
+            font-family: var(--serif);
+            background: linear-gradient(135deg, #fce4ec 0%, #f3e5f5 40%, #e1bee7 100%) fixed;
+            position: fixed;                /* pins the layout; off-screen pages can't widen the viewport */
+            top: 0; left: 0;
             width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 1;
+            height: 100vh;
+            height: 100dvh;                 /* real visible height on mobile browsers */
+            display: flex;
+            justify-content: center;
+            align-items: center;
             overflow: hidden;
+            color: #3d2e3d;
+            padding:
+                max(12px, env(safe-area-inset-top))
+                max(12px, env(safe-area-inset-right))
+                max(12px, env(safe-area-inset-bottom))
+                max(12px, env(safe-area-inset-left));
+            touch-action: manipulation;     /* no double-tap zoom delay */
         }
 
-        .chibi-particle {
+        button, input { font: inherit; -webkit-tap-highlight-color: transparent; }
+
+        /* ---------- Layout: stage (pages) + nav bar ---------- */
+        .book {
+            width: 100%;
+            max-width: 420px;
+            height: 100%;
+            max-height: 740px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .stage {
+            position: relative;
+            flex: 1;
+            min-height: 0;
+            perspective: 1500px;
+        }
+
+        .card-surface,
+        .page,
+        .lock-screen {
+            border-radius: 12px;
+            box-shadow:
+                0 20px 60px rgba(156, 39, 176, 0.15),
+                0 8px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        /* ---------- Pages ---------- */
+        .page {
             position: absolute;
-            bottom: -60px;
-            opacity: 0.16;
-            filter: drop-shadow(0 0 8px rgba(192, 140, 248, 0.5));
-            animation: floatUpAndSway linear infinite;
-            user-select: none;
+            inset: 0;
+            background:
+                linear-gradient(to bottom, rgba(255,249,251,0.93), rgba(253,242,248,0.95)),
+                var(--pattern);
+            background-size: auto, 110px 110px;
+            padding: 40px 36px 32px;
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+            overscroll-behavior: contain;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transform: translateX(40px) scale(0.96);
+            transition:
+                opacity 0.6s var(--ease),
+                transform 0.6s var(--ease),
+                visibility 0s linear 0.6s;  /* hide from tab order / paint once faded */
         }
 
-        @keyframes floatUpAndSway {
-            0% {
-                transform: translateY(0px) rotate(0deg) translateX(0px);
-            }
-            50% {
-                transform: translateY(-50vh) rotate(14deg) translateX(25px);
-            }
-            100% {
-                transform: translateY(-110vh) rotate(-14deg) translateX(-25px);
-            }
+        .page.active {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+            transform: none;
+            z-index: 10;
+            transition-delay: 0s;
         }
 
-        /* Custom Audio Progress Input */
-        input[type=range] {
-            -webkit-appearance: none;
-            background: rgba(192, 140, 248, 0.2);
-            height: 5px;
-            border-radius: 3px;
+        .page.prev { transform: translateX(-50px) scale(0.95); }
+
+        /* top accent bar */
+        .page::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, #f8bbd0, #ce93d8, #f8bbd0);
+            border-radius: 12px 12px 0 0;
         }
-        input[type=range]::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            height: 14px;
-            width: 14px;
-            border-radius: 50%;
-            background: #e0c0fe;
+
+        .corner {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            opacity: 0.25;
+            pointer-events: none;
+            border: 0 solid #ce93d8;
+        }
+        .corner.tl { top: 18px;    left: 18px;  border-top-width: 2px;    border-left-width: 2px; }
+        .corner.tr { top: 18px;    right: 18px; border-top-width: 2px;    border-right-width: 2px; }
+        .corner.bl { bottom: 18px; left: 18px;  border-bottom-width: 2px; border-left-width: 2px; }
+        .corner.br { bottom: 18px; right: 18px; border-bottom-width: 2px; border-right-width: 2px; }
+
+        /* ---------- Reveal animation (one rule instead of many) ---------- */
+        .page.active .reveal {
+            animation: softReveal 0.8s ease both;
+            animation-delay: var(--d, 0s);
+        }
+
+        @keyframes softReveal {
+            from { opacity: 0; transform: translateY(12px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ---------- Cover ---------- */
+        .cover-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .flower { font-size: 20px; margin-bottom: 8px; }
+        .page.active .flower { animation: sparkle 3s ease-in-out infinite; }
+
+        @keyframes sparkle {
+            0%, 100% { opacity: 0.5; transform: scale(1); }
+            50%      { opacity: 0.9; transform: scale(1.15); }
+        }
+
+        .cover-title {
+            font-family: var(--script);
+            font-size: 52px;
+            font-weight: 400;
+            color: #7b1fa2;
+            margin-bottom: 8px;
+            text-shadow: 0 2px 10px rgba(156, 39, 176, 0.15);
+        }
+        .page.active .cover-title { animation: gentleFloat 4s ease-in-out infinite; }
+
+        @keyframes gentleFloat {
+            0%, 100% { transform: translateY(0); }
+            50%      { transform: translateY(-6px); }
+        }
+
+        .cover-subtitle {
+            font-family: var(--display);
+            font-size: 18px;
+            color: #6a1b9a;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+
+        .cover-divider {
+            width: 80px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #ce93d8, transparent);
+            margin: 20px 0;
+        }
+
+        .cover-date { font-size: 15px; color: #8e24aa; letter-spacing: 2px; margin-top: 10px; }
+
+        .cover-quote {
+            font-style: italic;
+            font-size: 16px;
+            color: #5e4a5e;
+            margin-top: 40px;
+            max-width: 280px;
+            line-height: 1.6;
+        }
+
+        /* ---------- Chapters ---------- */
+        .chapter-number {
+            font-family: var(--display);
+            font-size: 13px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: #9c27b0;
+            margin-bottom: 12px;
+        }
+
+        .chapter-title {
+            font-family: var(--display);
+            font-size: 26px;
+            font-weight: 600;
+            color: #4a148c;
+            margin-bottom: 28px;
+            line-height: 1.3;
+        }
+
+        .chapter-body {
+            font-size: 17.5px;
+            line-height: 1.85;
+            color: #3d2e3d;
+            text-align: justify;
+            hyphens: auto;
+            flex: 1;
+        }
+        .chapter-body p { margin-bottom: 18px; }
+
+        /* ---------- Question page ---------- */
+        .question-page {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px 10px;
+        }
+
+        .question-text {
+            font-family: var(--display);
+            font-size: 24px;
+            color: #4a148c;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+
+        .question-hint {
+            font-size: 15px;
+            color: #8e6a9a;
+            margin-bottom: 40px;
+            font-style: italic;
+        }
+
+        /* --n = number of "No" clicks; CSS does the sizing math */
+        .choice-buttons {
+            --n: 0;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            min-height: 80px;
+            max-width: 100%;
+        }
+
+        .choice-btn {
+            border: none;
+            border-radius: 40px;
+            font-weight: 600;
             cursor: pointer;
-            box-shadow: 0 0 12px rgba(192, 140, 248, 0.9);
+            box-shadow: 0 4px 15px rgba(156, 39, 176, 0.2);
+            transition: transform 0.4s var(--ease), opacity 0.4s var(--ease), padding 0.4s var(--ease), font-size 0.4s var(--ease);
         }
 
-        /* 3D Flip Effects */
-        .perspective-1000 { perspective: 1000px; }
-        .transform-style-3d {
-            transform-style: preserve-3d;
-            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        .yes-btn {
+            background: linear-gradient(135deg, #f8bbd0, #ce93d8);
+            color: #6a1b9a;
+            padding: calc(14px + var(--n) * 3px) calc(36px + var(--n) * 8px);
+            font-size: calc(18px + var(--n) * 2px);
+            max-width: 100%;
         }
-        .backface-hidden { backface-visibility: hidden; }
-        .rotate-y-180 { transform: rotateY(180deg); }
 
-        /* Scrollbar Styling */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #06070a; }
-        ::-webkit-scrollbar-thumb { background: #321a5a; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #7038be; }
+        .no-btn {
+            background: #f5f5f5;
+            color: #757575;
+            border: 1px solid #e0e0e0;
+            padding: 12px 28px;
+            font-size: 16px;
+            min-height: 44px;
+            transform: scale(max(0.3, calc(1 - var(--n) * 0.15)));
+            opacity: max(0.2, calc(1 - var(--n) * 0.18));
+        }
+        .no-btn.gone { display: none; }
+
+        /* ---------- Bear page ---------- */
+        .bear-page {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
+        .bear-scene { position: relative; width: 220px; height: 240px; margin-bottom: 30px; }
+
+        .balloons {
+            position: absolute;
+            top: 0; left: 50%;
+            transform: translateX(-50%);
+            width: 140px; height: 90px;
+        }
+
+        .balloon {
+            position: absolute;
+            width: 36px; height: 44px;
+            border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
+        }
+        .page.active .balloon { animation: balloonFloat 3s ease-in-out infinite; }
+
+        .balloon::after {
+            content: '';
+            position: absolute;
+            bottom: -12px; left: 50%;
+            width: 1.5px; height: 18px;
+            background: #9e9e9e;
+            transform: translateX(-50%);
+        }
+
+        .balloon.pink     { background: linear-gradient(135deg, #f8bbd0, #f48fb1); left: 15px; top: 10px; }
+        .balloon.purple   { background: linear-gradient(135deg, #e1bee7, #ce93d8); left: 52px; top: 0;    animation-delay: 0.4s; }
+        .balloon.lavender { background: linear-gradient(135deg, #f3e5f5, #d1c4e9); left: 90px; top: 12px; animation-delay: 0.8s; }
+
+        @keyframes balloonFloat {
+            0%, 100% { transform: translateY(0) rotate(-3deg); }
+            50%      { transform: translateY(-8px) rotate(3deg); }
+        }
+
+        .bear {
+            position: absolute;
+            bottom: 10px; left: 50%;
+            transform: translateX(-50%);
+            width: 110px; height: 130px;
+        }
+        .page.active .bear { animation: bearJump 1.4s ease-in-out infinite; }
+
+        @keyframes bearJump {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            40%      { transform: translateX(-50%) translateY(-18px); }
+            60%      { transform: translateX(-50%) translateY(-8px); }
+        }
+
+        .bear-head, .bear-ear, .bear-body, .bear-arm { background: #d7a86e; }
+
+        .bear-head {
+            width: 70px; height: 60px;
+            border-radius: 50%;
+            position: absolute;
+            top: 0; left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+        }
+
+        .bear-ear {
+            width: 22px; height: 22px;
+            border-radius: 50%;
+            position: absolute;
+            top: -6px;
+        }
+        .bear-ear.left  { left: 4px; }
+        .bear-ear.right { right: 4px; }
+        .bear-ear::after {
+            content: '';
+            position: absolute;
+            width: 12px; height: 12px;
+            background: #c49a6c;
+            border-radius: 50%;
+            top: 5px; left: 5px;
+        }
+
+        .bear-face {
+            position: absolute;
+            top: 18px; left: 50%;
+            transform: translateX(-50%);
+            width: 40px; height: 30px;
+        }
+
+        .bear-eye {
+            width: 8px; height: 8px;
+            background: #4a3728;
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+        }
+        .bear-eye.left  { left: 4px; }
+        .bear-eye.right { right: 4px; }
+
+        .bear-nose {
+            width: 12px; height: 9px;
+            background: #5d4037;
+            border-radius: 50%;
+            position: absolute;
+            top: 12px; left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .bear-mouth {
+            position: absolute;
+            top: 22px; left: 50%;
+            transform: translateX(-50%);
+            width: 16px; height: 8px;
+            border-bottom: 2px solid #5d4037;
+            border-radius: 0 0 50% 50%;
+        }
+
+        .bear-body {
+            width: 80px; height: 70px;
+            border-radius: 40px 40px 30px 30px;
+            position: absolute;
+            bottom: 0; left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+
+        .bear-arm {
+            width: 22px; height: 40px;
+            border-radius: 12px;
+            position: absolute;
+            top: 55px;
+            z-index: 3;
+        }
+        .bear-arm.left  { left: 8px;  transform: rotate(25deg); }
+        .bear-arm.right { right: 8px; transform: rotate(-25deg); }
+        .page.active .bear-arm.left  { animation: armWaveLeft 1.4s ease-in-out infinite; }
+        .page.active .bear-arm.right { animation: armWaveRight 1.4s ease-in-out infinite; }
+
+        @keyframes armWaveLeft  { 0%, 100% { transform: rotate(25deg); }  50% { transform: rotate(45deg); } }
+        @keyframes armWaveRight { 0%, 100% { transform: rotate(-25deg); } 50% { transform: rotate(-45deg); } }
+
+        .bear-paw {
+            width: 18px; height: 16px;
+            background: #c49a6c;
+            border-radius: 50%;
+            position: absolute;
+            bottom: -4px; left: 2px;
+        }
+
+        .bear-message {
+            font-family: var(--display);
+            font-size: 18px;
+            color: #6a1b9a;
+            margin-top: 10px;
+            line-height: 1.5;
+        }
+        .bear-message span {
+            display: block;
+            font-size: 15px;
+            color: #8e6a9a;
+            margin-top: 8px;
+            font-style: italic;
+        }
+
+        /* ---------- Letter ---------- */
+        .letter-header { text-align: center; margin-bottom: 28px; }
+        .letter-header h2 {
+            font-family: var(--script);
+            font-size: 36px;
+            font-weight: 400;
+            color: #7b1fa2;
+            margin-bottom: 6px;
+        }
+        .letter-date { font-size: 14px; color: #8e24aa; letter-spacing: 1px; }
+
+        .letter-body {
+            font-size: 17px;
+            line-height: 1.9;
+            color: #3d2e3d;
+            text-align: justify;
+            hyphens: auto;
+        }
+        .letter-body p { margin-bottom: 16px; }
+
+        .letter-closing {
+            margin-top: 30px;
+            text-align: right;
+            font-style: italic;
+            color: #6a1b9a;
+        }
+        .letter-signature {
+            font-family: var(--script);
+            font-size: 28px;
+            font-style: normal;
+            color: #7b1fa2;
+            margin-top: 8px;
+        }
+
+        .photo-gallery { display: flex; justify-content: center; margin: 20px 0 12px; }
+
+        .photo-frame {
+            width: 160px; height: 160px;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(156, 39, 176, 0.22);
+            border: 3px solid #fff;
+            background: #fce4ec;
+        }
+        .page.active .photo-frame { animation: photoFloat 4.5s ease-in-out infinite; }
+        .photo-frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+        @keyframes photoFloat {
+            0%, 100% { transform: translateY(0); }
+            50%      { transform: translateY(-7px); }
+        }
+
+        /* ---------- Lock screen ---------- */
+        .lock-screen {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(255,249,251,0.97), rgba(253,242,248,0.98));
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 100;
+            padding: 40px 30px;
+            transition: opacity 0.5s ease, transform 0.5s ease, visibility 0s linear 0s;
+        }
+        .lock-screen.hidden {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transform: scale(0.95);
+            transition-delay: 0s, 0s, 0.5s;
+        }
+
+        .lock-form { display: flex; flex-direction: column; align-items: center; }
+
+        .lock-title { font-family: var(--script); font-size: 42px; color: #7b1fa2; margin-bottom: 8px; }
+        .lock-subtitle { font-size: 15px; color: #8e6a9a; margin-bottom: 35px; letter-spacing: 1px; }
+
+        .lock-input {
+            width: 180px;
+            padding: 12px 18px;
+            border: 2px solid #e1bee7;
+            border-radius: 30px;
+            font-size: 18px;                /* 16px+ stops iOS from zooming on focus */
+            text-align: center;
+            letter-spacing: 4px;
+            color: #4a148c;
+            background: #fff;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+        .lock-input:focus { border-color: #9c27b0; }
+
+        .lock-btn {
+            margin-top: 20px;
+            min-height: 44px;
+            background: linear-gradient(135deg, #f8bbd0, #ce93d8);
+            border: none;
+            padding: 11px 32px;
+            border-radius: 30px;
+            font-size: 16px;
+            color: #6a1b9a;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(156, 39, 176, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .lock-error {
+            margin-top: 14px;
+            font-size: 14px;
+            color: #c62828;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .lock-error.show { opacity: 1; }
+
+        .lock-hint { margin-top: 28px; font-size: 14px; color: #8d6a98; text-align: center; line-height: 1.6; }
+
+        /* ---------- Nav bar ---------- */
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            padding: 0 4px;
+            flex-shrink: 0;
+        }
+
+        .nav-btn {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            min-height: 44px;                /* comfortable tap target */
+            background: linear-gradient(135deg, #f8bbd0, #e1bee7);
+            border: none;
+            padding: 10px 22px;
+            border-radius: 30px;
+            font-size: 15px;
+            font-weight: 500;
+            color: #6a1b9a;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(156, 39, 176, 0.15);
+            transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease), opacity 0.35s var(--ease);
+        }
+        .nav-btn:active { transform: scale(0.96); }
+        .nav-btn:disabled { opacity: 0.35; cursor: not-allowed; box-shadow: none; transform: none; }
+
+        .page-indicator { font-size: 13px; color: #7b1fa2; letter-spacing: 2px; }
+
+        /* ---------- Music button ---------- */
+        .music-btn {
+            position: absolute;
+            top: 10px; right: 10px;
+            z-index: 30;
+            width: 44px; height: 44px;
+            display: grid;
+            place-items: center;
+            border: none;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.85);
+            color: #7b1fa2;
+            font-size: 22px;
+            line-height: 1;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(156, 39, 176, 0.2);
+            transition: transform 0.2s var(--ease);
+        }
+        .music-btn:active { transform: scale(0.92); }
+        .music-btn.off { color: #9e8aa8; }
+        .music-btn.off::after {      /* slash through the note when muted */
+            content: '';
+            position: absolute;
+            width: 2px; height: 26px;
+            background: currentColor;
+            border-radius: 2px;
+            transform: rotate(45deg);
+        }
+
+        /* Hover effects only on devices that can really hover (avoids "sticky hover" on touch) */
+        @media (hover: hover) {
+            .lock-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(156, 39, 176, 0.3); }
+            .yes-btn:hover  { box-shadow: 0 6px 20px rgba(156, 39, 176, 0.3); }
+            .no-btn:hover   { background: #eee; }
+            .nav-btn:hover:not(:disabled) {
+                transform: translateY(-3px);
+                box-shadow: 0 8px 20px rgba(156, 39, 176, 0.28);
+                background: linear-gradient(135deg, #f48fb1, #ce93d8);
+            }
+        }
+
+        :focus-visible { outline: 3px solid #9c27b0; outline-offset: 2px; }
+
+        /* ---------- Small screens ---------- */
+        @media (max-width: 480px) {
+            body { padding-left: max(8px, env(safe-area-inset-left)); padding-right: max(8px, env(safe-area-inset-right)); }
+            .book { max-height: none; }
+            .page { padding: 32px 24px 28px; }
+            .cover-title { font-size: 44px; }
+            .chapter-title { font-size: 22px; }
+            .chapter-body { font-size: 17px; }
+        }
+
+        /* Short landscape phones / very small heights */
+        @media (max-height: 560px) {
+            .page { padding-top: 28px; }
+            .bear-scene { transform: scale(0.8); margin-bottom: 0; }
+        }
+
+        /* Respect users who turn animations off */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                transition-delay: 0s !important;
+            }
+        }
     </style>
 </head>
-<body class="flex flex-col justify-between selection:bg-violet-500 selection:text-white">
+<body>
+    <main class="book">
+        <div class="stage" id="stage">
 
-    <!-- Cozy Background Audio Player (Persistent Low-Fi Ambience) -->
-    <audio id="cozy-bg-audio" loop preload="auto">
-        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3" type="audio/mpeg">
-    </audio>
-
-    <!-- Floating Chibi BTS Background Layer -->
-    <div id="chibi-bg" class="chibi-container"></div>
-
-    <!-- Ambient Glow Orbs -->
-    <div id="ambient-orb-1" class="fixed -top-24 -left-24 w-96 h-96 bg-violet-600/20 rounded-full blur-[140px] pointer-events-none transition-all duration-700"></div>
-    <div id="ambient-orb-2" class="fixed bottom-0 right-0 w-[500px] h-[500px] bg-violet-900/25 rounded-full blur-[160px] pointer-events-none transition-all duration-700"></div>
-
-    <header class="sticky top-0 z-40 backdrop-blur-xl bg-slateDark/80 border-b border-glassBorder">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
-                
-                <!-- Brand Logo -->
-                <div class="flex items-center gap-3.5 cursor-pointer" onclick="switchTab('home')">
-                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-violet-700 via-violet-400 to-rose-300 p-0.5 shadow-lg shadow-violet-950">
-                        <div class="w-full h-full bg-slateDark rounded-[10px] flex items-center justify-center">
-                            <span class="font-romantic-heading text-violet-200 font-bold text-xl">7</span>
-                        </div>
-                    </div>
-                    <div>
-                        <span class="font-romantic-heading text-xl sm:text-2xl font-bold tracking-wide text-white">
-                            BTS <span class="font-script-accent text-2xl sm:text-3xl text-violet-300 ml-1">Anthology</span>
-                        </span>
-                        <span class="block text-[10px] tracking-widest text-violet-300/70 uppercase font-mono">For My Favorite Person</span>
-                    </div>
-                </div>
-
-                <!-- Desktop Navigation Tabs (4 Pages) -->
-                <nav class="hidden lg:flex items-center p-1 rounded-2xl bg-violet-950/40 border border-glassBorder">
-                    <button onclick="switchTab('home')" id="nav-home" class="nav-btn px-5 py-2 rounded-xl text-xs font-medium tracking-wide transition-all duration-300 flex items-center gap-2">
-                        <i class="fa-solid fa-heart text-violet-300 text-xs"></i> Member Stories
-                    </button>
-                    <button onclick="switchTab('music')" id="nav-music" class="nav-btn px-5 py-2 rounded-xl text-xs font-medium tracking-wide transition-all duration-300 flex items-center gap-2">
-                        <i class="fa-solid fa-compact-disc text-xs"></i> Discography
-                    </button>
-                    <button onclick="switchTab('funny')" id="nav-funny" class="nav-btn px-5 py-2 rounded-xl text-xs font-medium tracking-wide transition-all duration-300 flex items-center gap-2">
-                        <i class="fa-solid fa-face-grin-squint text-amber-300 text-xs"></i> Funny Gallery
-                    </button>
-                    <button onclick="switchTab('notes')" id="nav-notes" class="nav-btn px-5 py-2 rounded-xl text-xs font-medium tracking-wide transition-all duration-300 flex items-center gap-2">
-                        <i class="fa-solid fa-lightbulb text-xs"></i> Trivia & Lockbox
-                    </button>
-                </nav>
-
-                <!-- Cozy Background Music Toggle Button -->
-                <div class="flex items-center gap-3">
-                    <button onclick="toggleCozyAudio()" id="cozy-audio-btn" class="px-4 py-2 rounded-xl glass-panel hover:border-violet-300/50 text-violet-200 text-xs font-medium flex items-center gap-2.5 transition duration-300 shadow-lg">
-                        <i class="fa-solid fa-music text-violet-300 animate-pulse" id="cozy-audio-icon"></i>
-                        <span id="cozy-audio-label" class="hidden sm:inline">Cozy Ambience: Off</span>
-                    </button>
-                </div>
+            <!-- LOCK SCREEN -->
+            <div class="lock-screen" id="lockScreen">
+                <form class="lock-form" id="lockForm" autocomplete="off">
+                    <div class="lock-title">For Fluffy</div>
+                    <label class="lock-subtitle" for="passwordInput">Enter the password</label>
+                    <input type="password" class="lock-input" id="passwordInput" placeholder="••••"
+                           maxlength="10" inputmode="numeric" pattern="[0-9]*" enterkeyhint="go"
+                           autocomplete="off" autocapitalize="off" spellcheck="false">
+                    <button type="submit" class="lock-btn">Open</button>
+                    <div class="lock-error" id="lockError" role="alert">Wrong password</div>
+                </form>
+                <div class="lock-hint">Hint: The year you were born</div>
             </div>
-        </div>
 
-        <!-- Mobile Bottom Nav -->
-        <div class="lg:hidden flex justify-around bg-slateDark/95 border-t border-glassBorder py-3 px-2 backdrop-blur-lg">
-            <button onclick="switchTab('home')" id="mobile-nav-home" class="mobile-nav-btn flex flex-col items-center text-[10px] font-medium text-violet-300/60">
-                <i class="fa-solid fa-heart text-sm mb-1"></i> Stories
-            </button>
-            <button onclick="switchTab('music')" id="mobile-nav-music" class="mobile-nav-btn flex flex-col items-center text-[10px] font-medium text-violet-300/60">
-                <i class="fa-solid fa-compact-disc text-sm mb-1"></i> Music
-            </button>
-            <button onclick="switchTab('funny')" id="mobile-nav-funny" class="mobile-nav-btn flex flex-col items-center text-[10px] font-medium text-violet-300/60">
-                <i class="fa-solid fa-face-grin-squint text-sm mb-1"></i> Funny
-            </button>
-            <button onclick="switchTab('notes')" id="mobile-nav-notes" class="mobile-nav-btn flex flex-col items-center text-[10px] font-medium text-violet-300/60">
-                <i class="fa-solid fa-lightbulb text-sm mb-1"></i> Trivia
-            </button>
-        </div>
-    </header>
+            <button type="button" class="music-btn" id="musicBtn" hidden aria-label="Music on or off" aria-pressed="false">♪</button>
+            <audio id="bgm" loop preload="none"></audio>
 
-    <!-- Main Dynamic Content Container -->
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-grow w-full z-10">
+            <!-- PAGE 1: Cover -->
+            <section class="page" id="page1">
+                <div class="corner tl"></div><div class="corner tr"></div>
+                <div class="corner bl"></div><div class="corner br"></div>
 
-        <!-- ================= PAGE 1: MEMBER PROFILES & EXPANDABLE BACKSTORIES ================= -->
-        <section id="page-home" class="tab-content transition-all duration-500 space-y-10">
-            
-            <!-- Romantic Hero Header -->
-            <div class="glass-panel rounded-3xl p-8 sm:p-12 border border-glassBorder relative overflow-hidden">
-                <div class="max-w-3xl space-y-4">
-                    <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-mono uppercase tracking-wider bg-violet-500/15 text-violet-200 border border-violet-400/30">
-                        <i class="fa-solid fa-sparkles text-[10px] text-violet-300"></i> Designed Especially For You
-                    </div>
-                    <h1 class="font-romantic-heading text-4xl sm:text-6xl font-bold text-white leading-tight">
-                        Seven Lives, Infinite <span class="font-script-accent text-5xl sm:text-7xl font-normal bg-clip-text text-transparent bg-gradient-to-r from-violet-200 via-violet-300 to-rose-200 ml-2">Harmonies</span>
-                    </h1>
-                    <p class="text-violet-100/80 text-sm sm:text-base leading-relaxed font-light">
-                        Every member carries a unique soul, artistic devotion, and a special story. <strong class="text-violet-200 font-normal">Click or tap any profile card</strong> to explore their deep backstories, signature solos, cute habits, and personal notes written with love.
+                <div class="cover-content reveal">
+                    <div class="flower">✧</div>
+                    <h1 class="cover-title">For Fluffy</h1>
+                    <p class="cover-subtitle">A Quiet Little Story</p>
+                    <div class="cover-divider"></div>
+                    <p class="cover-date">14 November</p>
+                    <p class="cover-quote">
+                        “Some people leave footprints on our days,<br>
+                        even when the path grows quiet.”
                     </p>
                 </div>
-            </div>
+            </section>
 
-            <!-- Member Grid Container -->
-            <div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="members-container">
-                    <!-- Cards injected via JS -->
-                </div>
-            </div>
-        </section>
+            <!-- PAGE 2: Interactive Question -->
+            <section class="page" id="page2">
+                <div class="corner tl"></div><div class="corner tr"></div>
 
-        <!-- ================= PAGE 2: MUSIC PLAYER & DISCOGRAPHY ================= -->
-        <section id="page-music" class="tab-content hidden transition-all duration-500 space-y-10">
-            
-            <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
-                <div>
-                    <span class="text-xs font-mono uppercase tracking-widest text-violet-300/70">Selected Soundtracks</span>
-                    <h2 class="font-romantic-heading font-bold text-3xl sm:text-5xl text-white mt-1">Discography & Player</h2>
-                </div>
+                <div class="question-page">
+                    <div class="question-text">Are you curious to see what’s next?</div>
+                    <div class="question-hint">Keep clicking No… a little surprise is waiting 😉</div>
 
-                <!-- Era Filter Buttons -->
-                <div class="flex flex-wrap gap-2" id="era-filters">
-                    <button onclick="filterEra('all', this)" class="era-btn px-4 py-2 rounded-xl text-xs font-medium bg-violet-600 text-white border border-violet-400 transition">All Eras</button>
-                    <button onclick="filterEra('hyyh', this)" class="era-btn px-4 py-2 rounded-xl text-xs font-medium glass-panel text-violet-200 hover:border-violet-400 transition">HYYH Era</button>
-                    <button onclick="filterEra('ly', this)" class="era-btn px-4 py-2 rounded-xl text-xs font-medium glass-panel text-violet-200 hover:border-violet-400 transition">Love Yourself</button>
-                    <button onclick="filterEra('mots', this)" class="era-btn px-4 py-2 rounded-xl text-xs font-medium glass-panel text-violet-200 hover:border-violet-400 transition">Map of the Soul</button>
-                </div>
-            </div>
-
-            <!-- Main Audio Player Box -->
-            <div class="glass-panel rounded-3xl p-6 sm:p-8 border border-violet-400/30 shadow-2xl space-y-6">
-                
-                <div class="flex flex-col md:flex-row items-center gap-8">
-                    <!-- Album Cover Art -->
-                    <div class="relative w-48 h-48 sm:w-56 sm:h-56 rounded-2xl overflow-hidden shadow-2xl flex-shrink-0 group border border-glassBorder">
-                        <img id="active-track-art" src="https://images.unsplash.com/photo-1518895949257-7621c3c786d7?auto=format&fit=crop&w=600&q=80" alt="Album Art" class="w-full h-full object-cover transition duration-500">
-                        <div class="absolute inset-0 bg-violet-950/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
-                            <i class="fa-solid fa-compact-disc text-5xl text-violet-300 animate-spin" style="animation-duration: 8s;"></i>
-                        </div>
-                    </div>
-
-                    <!-- Track Metadata & Commentary -->
-                    <div class="flex-grow space-y-4 text-center md:text-left w-full">
-                        <div>
-                            <div class="flex items-center justify-center md:justify-start gap-2 mb-1">
-                                <span id="active-track-era" class="text-[10px] font-mono uppercase tracking-widest px-2.5 py-0.5 rounded-full bg-violet-500/20 text-violet-300 border border-violet-500/30">Love Yourself Era</span>
-                            </div>
-                            <h3 id="active-track-title" class="font-romantic-heading font-bold text-3xl sm:text-5xl text-white">Euphoria</h3>
-                            <p id="active-track-album" class="text-xs text-violet-300/70 mt-1 font-mono">LOVE YOURSELF 結 'Answer' (2018)</p>
-                        </div>
-
-                        <!-- Lyric Preview -->
-                        <div class="p-4 rounded-2xl bg-violet-950/60 border border-glassBorder text-xs text-violet-100/90 italic">
-                            <i class="fa-solid fa-quote-left text-violet-400 mr-2"></i>
-                            <span id="active-track-lyric">"You are the cause of my euphoria... Take my hands now."</span>
-                        </div>
-
-                        <!-- Personal Note -->
-                        <div class="p-4 rounded-2xl bg-violet-900/25 border border-violet-400/20 text-xs text-violet-200">
-                            <span class="font-medium text-white block mb-0.5"><i class="fa-solid fa-heart text-rose-400 mr-1"></i> Why This Track Matters:</span>
-                            <p id="active-track-note" class="font-light">This track captures the weightless, bright happiness of simple moments spent together.</p>
-                        </div>
+                    <div class="choice-buttons" id="choices">
+                        <button type="button" class="choice-btn yes-btn" id="yesBtn">Yes</button>
+                        <button type="button" class="choice-btn no-btn" id="noBtn">No</button>
                     </div>
                 </div>
+            </section>
 
-                <!-- Custom Audio Player Controls -->
-                <div class="pt-4 border-t border-glassBorder space-y-3">
-                    <audio id="audio-element" preload="auto"></audio>
+            <!-- PAGE 3 -->
+            <section class="page" id="page3">
+                <div class="corner tl"></div><div class="corner tr"></div>
 
-                    <!-- Seekbar -->
-                    <div class="flex items-center gap-3">
-                        <span id="audio-time-curr" class="text-[11px] font-mono text-violet-300/70">0:00</span>
-                        <input type="range" id="audio-seek" value="0" max="100" class="w-full" oninput="seekAudioTrack(this.value)">
-                        <span id="audio-time-dur" class="text-[11px] font-mono text-violet-300/70">0:00</span>
-                    </div>
-
-                    <!-- Audio Controls Row -->
-                    <div class="flex items-center justify-between pt-2">
-                        <div class="flex items-center gap-3">
-                            <button onclick="toggleAudioMute()" id="mute-btn" class="text-violet-300/70 hover:text-violet-200 text-xs">
-                                <i class="fa-solid fa-volume-high" id="mute-icon"></i>
-                            </button>
-                            <input type="range" id="volume-slider" min="0" max="1" step="0.05" value="0.8" class="w-20" oninput="adjustVolume(this.value)">
-                        </div>
-
-                        <div class="flex items-center gap-4">
-                            <button onclick="prevTrack()" class="p-2 text-violet-300 hover:text-white transition">
-                                <i class="fa-solid fa-backward-step text-lg"></i>
-                            </button>
-
-                            <button onclick="togglePlayPause()" id="main-play-btn" class="w-12 h-12 rounded-full bg-gradient-to-tr from-violet-600 to-violet-400 text-white flex items-center justify-center hover:scale-105 transition shadow-lg shadow-violet-600/30">
-                                <i class="fa-solid fa-play text-sm ml-0.5" id="main-play-icon"></i>
-                            </button>
-
-                            <button onclick="nextTrack()" class="p-2 text-violet-300 hover:text-white transition">
-                                <i class="fa-solid fa-forward-step text-lg"></i>
-                            </button>
-                        </div>
-
-                        <div class="text-xs text-violet-300/50 font-mono hidden sm:block">
-                            BTS Curated Player
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- Tracklist Grid -->
-            <div>
-                <h3 class="font-romantic-heading font-semibold text-2xl text-white mb-4">Curated Tracks</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="tracklist-container">
-                    <!-- Injected via JS -->
-                </div>
-            </div>
-
-        </section>
-
-        <!-- ================= PAGE 3: FUNNY BTS GALLERY & MEMES ================= -->
-        <section id="page-funny" class="tab-content hidden transition-all duration-500 space-y-10">
-            
-            <div class="glass-panel rounded-3xl p-8 border border-glassBorder relative overflow-hidden">
-                <div class="max-w-3xl space-y-3">
-                    <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono uppercase tracking-wider bg-amber-400/10 text-amber-300 border border-amber-400/20">
-                        <i class="fa-solid fa-face-grin-squint text-amber-300"></i> Pure Unfiltered Chaos
-                    </span>
-                    <h2 class="font-romantic-heading font-bold text-3xl sm:text-5xl text-white">
-                        The Funny & <span class="font-script-accent text-4xl sm:text-6xl text-amber-300 ml-1">Derp Archive</span>
-                    </h2>
-                    <p class="text-violet-100/80 text-xs sm:text-sm font-light leading-relaxed">
-                        For all the times BTS made you laugh until your stomach hurt! From Jin's chaotic screaming to Jungshook and Yoongi's mood faces, here are iconic hilarious moments and meme quotes guaranteed to brighten your day.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Interactive Meme Generator Widget -->
-            <div class="glass-panel rounded-3xl p-6 sm:p-8 border border-amber-400/20 shadow-xl space-y-4">
-                <div class="flex items-center justify-between border-b border-glassBorder pb-3">
-                    <h3 class="font-romantic-heading font-bold text-xl sm:text-2xl text-white flex items-center gap-2">
-                        <i class="fa-solid fa-dice text-amber-300"></i> Random BTS Funny Quote Generator
-                    </h3>
-                    <button onclick="generateRandomMemeQuote()" class="px-4 py-2 rounded-xl bg-gradient-to-r from-amber-500 to-violet-600 text-white text-xs font-medium hover:scale-105 transition shadow-lg flex items-center gap-2">
-                        <i class="fa-solid fa-arrows-rotate"></i> New Meme
-                    </button>
-                </div>
-                <div class="p-6 rounded-2xl bg-violet-950/70 border border-glassBorder text-center space-y-2">
-                    <p id="meme-quote-display" class="font-romantic-heading font-bold text-2xl sm:text-3xl text-amber-200">"You got no jams!"</p>
-                    <p id="meme-author-display" class="text-xs text-violet-300/70 font-mono">— RM to Jimin (in an airplane)</p>
-                </div>
-            </div>
-
-            <!-- Funny Moments & Meme Photo Grid -->
-            <div>
-                <h3 class="font-romantic-heading font-semibold text-2xl text-white mb-6">Iconic Chaotic Moments</h3>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="funny-gallery-container">
-                    <!-- Injected via JS -->
-                </div>
-            </div>
-
-        </section>
-
-        <!-- ================= PAGE 4: TRIVIA, ARMY QUIZ & LOCKBOX ================= -->
-        <section id="page-notes" class="tab-content hidden transition-all duration-500 space-y-12">
-            
-            <div class="max-w-2xl">
-                <span class="text-xs font-mono uppercase tracking-widest text-violet-300/70">ARMY Lore & Secret Messages</span>
-                <h2 class="font-romantic-heading font-bold text-3xl sm:text-5xl text-white mt-1">Trivia & Secret Lockbox</h2>
-                <p class="text-xs sm:text-sm text-violet-300/70 mt-2 font-light">Flip through iconic BTS lore cards, test your knowledge with the ARMY Challenge, or unlock the secret lockbox message.</p>
-            </div>
-
-            <!-- 3D Flip Cards Grid -->
-            <div>
-                <h3 class="font-romantic-heading font-semibold text-2xl text-white mb-4 flex items-center gap-2">
-                    <i class="fa-solid fa-rotate text-violet-400 text-sm"></i> Interactive Lore Cards
-                </h3>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="flip-cards-container">
-                    <!-- Injected via JS -->
-                </div>
-            </div>
-
-            <!-- Interactive ARMY Quiz Section -->
-            <div class="glass-panel rounded-3xl p-6 sm:p-10 border border-glassBorder space-y-6">
-                <div class="flex items-center justify-between border-b border-glassBorder pb-4">
-                    <div>
-                        <span class="text-[10px] font-mono uppercase tracking-wider text-violet-300">ARMY Knowledge Test</span>
-                        <h3 class="font-romantic-heading font-bold text-2xl sm:text-3xl text-white">BTS Trivia Challenge</h3>
-                    </div>
-                    <span id="quiz-progress" class="text-xs font-mono text-violet-300/70">Question 1 of 4</span>
-                </div>
-
-                <div id="quiz-container" class="space-y-6">
-                    <!-- Question injected via JS -->
-                </div>
-
-                <div id="quiz-score-box" class="hidden p-6 rounded-2xl bg-violet-950/80 border border-violet-400/30 text-center space-y-3">
-                    <i class="fa-solid fa-award text-4xl text-amber-300"></i>
-                    <h4 class="font-romantic-heading font-bold text-3xl text-white" id="quiz-score-title"></h4>
-                    <p class="text-xs sm:text-sm text-violet-200 leading-relaxed max-w-lg mx-auto font-light" id="quiz-score-msg"></p>
-                    <button onclick="resetQuiz()" class="px-5 py-2 rounded-xl bg-violet-600 text-white text-xs font-medium hover:bg-violet-500 transition">Retake Quiz</button>
-                </div>
-            </div>
-
-            <!-- Secret Lockbox -->
-            <div class="glass-panel rounded-3xl p-6 sm:p-10 border border-violet-400/30 text-center max-w-2xl mx-auto space-y-5">
-                <div class="w-14 h-14 rounded-full bg-violet-900/50 border border-violet-400/40 flex items-center justify-center mx-auto text-violet-200 text-xl shadow-lg">
-                    <i class="fa-solid fa-lock" id="lockbox-icon"></i>
-                </div>
-                <div>
-                    <h3 class="font-romantic-heading font-bold text-2xl sm:text-3xl text-white">Secret Message Lockbox</h3>
-                    <p class="text-xs text-violet-300/70 mt-1 font-mono">Hint: Enter the year BTS debuted (4 digits)</p>
-                </div>
-
-                <div class="flex items-center justify-center gap-2 max-w-xs mx-auto">
-                    <input type="password" id="lockbox-pin" placeholder="Year..." maxlength="4" class="w-36 text-center px-4 py-2.5 rounded-xl bg-violet-950/80 border border-glassBorder text-white text-sm focus:outline-none focus:border-violet-400 font-mono">
-                    <button onclick="unlockLockbox()" class="px-5 py-2.5 rounded-xl bg-violet-600 text-white text-xs font-medium hover:bg-violet-500 transition shadow-md">Unlock</button>
-                </div>
-
-                <div id="lockbox-content" class="hidden p-6 rounded-2xl bg-violet-900/30 border border-violet-400/40 text-xs sm:text-sm text-violet-100 leading-relaxed font-light italic text-left space-y-2">
-                    <p class="font-script-accent text-3xl text-violet-300 text-center">I Love You Beyond Words</p>
+                <div class="chapter-number reveal">Chapter One</div>
+                <h2 class="chapter-title reveal" style="--d:.15s">The Days That Felt Easy</h2>
+                <div class="chapter-body reveal" style="--d:.3s">
                     <p>
-                        "I made this special little space for you because I know how deeply BTS's music, laughter, and messages resonate with your heart. You bring so much light, warmth, and joy into my world every single day. I hope this gift brings a huge smile to your face today!" ✨💜
+                        There was a time when words flowed between us like a quiet stream —
+                        daily, effortless, and somehow necessary.
+                    </p>
+                    <p>
+                        In the first months of 2024 and 2025, those conversations became a small constant.
+                        Not dramatic. Not loud. Just... present.
+                    </p>
+                    <p>
+                        Looking back, it feels like a short chapter that still lingers longer than it should.
                     </p>
                 </div>
-            </div>
+            </section>
 
-        </section>
+            <!-- PAGE 4 -->
+            <section class="page" id="page4">
+                <div class="corner tl"></div><div class="corner tr"></div>
 
-    </main>
-
-    <!-- Member Backstory Modal Overlay -->
-    <div id="member-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slateDark/85 backdrop-blur-2xl opacity-0 pointer-events-none transition-all duration-300">
-        <div class="glass-panel rounded-3xl border border-violet-400/40 w-full max-w-4xl max-h-[90vh] overflow-y-auto p-6 sm:p-10 relative space-y-8 shadow-2xl">
-            
-            <!-- Close Button -->
-            <button onclick="closeMemberModal()" class="absolute top-6 right-6 w-10 h-10 rounded-full bg-violet-950/80 border border-glassBorder text-violet-300 hover:text-white hover:border-violet-400 flex items-center justify-center transition z-20">
-                <i class="fa-solid fa-xmark text-lg"></i>
-            </button>
-
-            <!-- Modal Content Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
-                
-                <!-- Left Column: Image & Basic Info -->
-                <div class="md:col-span-5 space-y-4">
-                    <div class="relative h-80 sm:h-96 rounded-2xl overflow-hidden bg-violet-950 shadow-2xl border border-glassBorder">
-                        <img id="modal-member-img" src="" alt="Member" class="w-full h-full object-cover transition duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-slateDark/90 via-transparent to-transparent"></div>
-                        <div class="absolute bottom-4 left-4 right-4">
-                            <span id="modal-member-role" class="text-[10px] font-mono uppercase tracking-widest text-violet-300 bg-violet-950/90 px-2.5 py-1 rounded-md border border-violet-500/30 backdrop-blur-md"></span>
-                            <h2 id="modal-member-name" class="font-romantic-heading font-bold text-3xl sm:text-4xl text-white mt-1"></h2>
-                            <p id="modal-member-fullname" class="text-xs text-violet-300/70 font-mono"></p>
-                        </div>
-                    </div>
+                <div class="chapter-number reveal">Chapter Two</div>
+                <h2 class="chapter-title reveal" style="--d:.15s">When the Pages Turned</h2>
+                <div class="chapter-body reveal" style="--d:.3s">
+                    <p>
+                        Then came the quiet understanding.
+                    </p>
+                    <p>
+                        You sensed that the daily talks were no longer adding what they once did —
+                        especially with SSC waiting ahead. So you stepped back, gently,
+                        the way someone closes a book they still care about.
+                    </p>
+                    <p>
+                        And later, you returned with an A+.
+                        That part still makes me smile.
+                    </p>
                 </div>
+            </section>
 
-                <!-- Right Column: Rich Backstory & Personal Notes -->
-                <div class="md:col-span-7 space-y-6">
-                    
-                    <!-- Quote Box -->
-                    <div class="p-4 rounded-2xl bg-violet-950/70 border border-violet-400/20 text-xs sm:text-sm text-violet-100 italic">
-                        <i class="fa-solid fa-quote-left text-violet-400 mr-2"></i>
-                        <span id="modal-member-quote"></span>
-                    </div>
+            <!-- PAGE 5: Cute Bear Surprise -->
+            <section class="page" id="page5">
+                <div class="corner tl"></div><div class="corner tr"></div>
 
-                    <!-- Deep Backstory -->
-                    <div class="space-y-2">
-                        <h4 class="font-romantic-heading font-bold text-xl text-white flex items-center gap-2">
-                            <i class="fa-solid fa-book-open text-violet-400 text-sm"></i> Identity & Artistic Journey
-                        </h4>
-                        <p id="modal-member-backstory" class="text-xs sm:text-sm text-violet-100/80 leading-relaxed font-light">
-                        </p>
-                    </div>
-
-                    <!-- Highlights Grid -->
-                    <div class="grid grid-cols-2 gap-3 pt-2">
-                        <div class="p-3.5 rounded-xl bg-violet-900/20 border border-glassBorder space-y-1">
-                            <span class="text-[10px] font-mono text-violet-300/60 uppercase tracking-wider block">Signature Solos</span>
-                            <p id="modal-member-solos" class="text-xs text-white font-medium"></p>
+                <div class="bear-page reveal" style="--d:.1s">
+                    <div class="bear-scene">
+                        <div class="balloons">
+                            <div class="balloon pink"></div>
+                            <div class="balloon purple"></div>
+                            <div class="balloon lavender"></div>
                         </div>
-                        <div class="p-3.5 rounded-xl bg-violet-900/20 border border-glassBorder space-y-1">
-                            <span class="text-[10px] font-mono text-violet-300/60 uppercase tracking-wider block">Key Eras & Moments</span>
-                            <p id="modal-member-eras" class="text-xs text-white font-medium"></p>
-                        </div>
-                    </div>
 
-                    <!-- Quirks & Habits -->
-                    <div class="p-3.5 rounded-xl bg-violet-900/20 border border-glassBorder space-y-1">
-                        <span class="text-[10px] font-mono text-violet-300/60 uppercase tracking-wider block">Cute Quirks & Habits</span>
-                        <p id="modal-member-quirks" class="text-xs text-violet-200 font-light"></p>
-                    </div>
-
-                    <!-- Personal Impression Note -->
-                    <div class="p-4 rounded-2xl bg-violet-600/15 border border-violet-400/30 text-xs text-violet-100 space-y-1">
-                        <span class="font-medium text-white block text-[11px] uppercase tracking-wider font-mono"><i class="fa-solid fa-heart text-rose-400 mr-1"></i> Personal Note:</span>
-                        <p id="modal-member-gf" class="font-light leading-relaxed"></p>
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <!-- Footer -->
-    <footer class="mt-16 border-t border-glassBorder py-8 bg-slateDark/90">
-        <div class="max-w-7xl mx-auto px-4 text-center space-y-2">
-            <p class="font-script-accent text-2xl text-violet-200">
-                "Apobangpo — BTS & ARMY Forever"
-            </p>
-            <p class="text-[11px] font-mono text-violet-300/40">Created Specially For You</p>
-        </div>
-    </footer>
-
-    <script>
-        // Floating Chibi BTS SVG Vector Definitions
-        const chibiSvgs = [
-            `<svg width="38" height="38" viewBox="0 0 64 64" fill="none"><circle cx="32" cy="36" r="22" fill="#c08cf8"/><ellipse cx="22" cy="18" rx="5" ry="14" fill="#c08cf8"/><ellipse cx="42" cy="18" rx="5" ry="14" fill="#c08cf8"/><ellipse cx="22" cy="18" rx="2.5" ry="9" fill="#f3e8ff"/><ellipse cx="42" cy="18" rx="2.5" ry="9" fill="#f3e8ff"/><circle cx="26" cy="34" r="2.5" fill="#110922"/><circle cx="38" cy="34" r="2.5" fill="#110922"/><path d="M30 40 Q32 43 34 40" stroke="#110922" stroke-width="2" stroke-linecap="round"/></svg>`,
-            `<svg width="36" height="36" viewBox="0 0 64 64" fill="none"><circle cx="32" cy="34" r="22" fill="#e0c0fe"/><path d="M32 6 C28 0 18 2 20 12 C22 20 32 26 32 26 C32 26 42 20 44 12 C46 2 36 0 32 6 Z" fill="#975be6"/><circle cx="25" cy="32" r="2.5" fill="#110922"/><circle cx="39" cy="32" r="2.5" fill="#110922"/><circle cx="21" cy="37" r="3" fill="#f3e8ff" opacity="0.6"/><circle cx="43" cy="37" r="3" fill="#f3e8ff" opacity="0.6"/><path d="M29 39 Q32 42 35 39" stroke="#110922" stroke-width="2" stroke-linecap="round"/></svg>`,
-            `<svg width="36" height="36" viewBox="0 0 64 64" fill="none"><circle cx="32" cy="36" r="22" fill="#975be6"/><path d="M20 18 L25 25 L32 15 L39 25 L44 18 L42 28 L22 28 Z" fill="#f3e8ff"/><circle cx="25" cy="36" r="2.5" fill="#110922"/><circle cx="39" cy="36" r="2.5" fill="#110922"/><path d="M29 42 Q32 45 35 42" stroke="#110922" stroke-width="2" stroke-linecap="round"/></svg>`,
-            `<svg width="38" height="38" viewBox="0 0 64 64" fill="none"><circle cx="18" cy="18" r="8" fill="#7038be"/><circle cx="46" cy="18" r="8" fill="#7038be"/><circle cx="32" cy="36" r="22" fill="#7038be"/><circle cx="32" cy="40" r="8" fill="#f3e8ff"/><circle cx="25" cy="32" r="2.5" fill="#110922"/><circle cx="39" cy="32" r="2.5" fill="#110922"/><ellipse cx="32" cy="38" rx="2" ry="1.5" fill="#110922"/></svg>`,
-            `<svg width="36" height="36" viewBox="0 0 64 64" fill="none"><path d="M14 16 L26 26 L12 32 Z" fill="#c08cf8"/><path d="M50 16 L38 26 L52 32 Z" fill="#c08cf8"/><circle cx="32" cy="36" r="22" fill="#c08cf8"/><ellipse cx="25" cy="34" rx="2.5" ry="1.5" fill="#110922"/><ellipse cx="39" cy="34" rx="2.5" ry="1.5" fill="#110922"/><path d="M30 41 Q32 43 34 41" stroke="#110922" stroke-width="2" stroke-linecap="round"/></svg>`
-        ];
-
-        // Member Profiles Data
-        const btsMembers = [
-            {
-                id: "rm",
-                name: "RM",
-                fullName: "Kim Nam-joon",
-                role: "Leader & Main Rapper",
-                img: "https://i.pinimg.com/736x/5e/4c/a7/5e4ca73fa7f2f6b153119fddebe1536a.jpg",
-                quote: "‘Maybe I made a mistake yesterday, but yesterday’s me is still me. Today, I am who I am.’",
-                backstory: "Behind RM—the fluent UN-speaker, brilliant lyricist, and leader who holds BTS together—lies Kim Namjoon, a quiet philosopher. He finds peace in 'Namjooning': visiting art museums, riding his bicycle along the Han River, and collecting bonsai trees. His dual nature bridges hip-hop energy with reflective artistry.",
-                solos: "Persona, Reflection, Moonchild, Wild Flower",
-                eras: "HYYH 'RUN' Leader, UN Speech 2018, Indigo Release",
-                quirks: "Famous for accidentally breaking things, deeply loves crab hunting at the beach, always carries a book.",
-                gfThought: "His deep passion for art galleries, quiet reading, and reflective conversations always reminds me of your brilliant and thoughtful soul."
-            },
-            {
-                id: "jin",
-                name: "Jin",
-                fullName: "Kim Seok-jin",
-                role: "Vocalist & Visual",
-                img: "https://i.pinimg.com/736x/17/02/c8/1702c89581581378e622abfcc66534ec.jpg",
-                quote: "‘Your presence can give happiness. I hope you remember that.’",
-                backstory: "Scouted on the street while attending university, Jin entered BTS with no prior vocal or dance training. Through endless late-night practice, he became the powerful vocalist behind 'Epiphany' and 'The Astronaut'. Famous as 'Worldwide Handsome', Jin uses silly dad jokes and self-assurance as a gentle way to comfort everyone around him.",
-                solos: "Awake, Epiphany, Moon, The Astronaut",
-                eras: "Fire Era Blonde Jin, Epiphany Stadium Solos, The Astronaut",
-                quirks: "Blinks cutely when hungry, loves gaming till late, blows grand flying kisses to ARMY at concerts.",
-                gfThought: "Your effortless ability to make everyone laugh and feel comfortable around you matches Jin's warm and radiant charm."
-            },
-            {
-                id: "suga",
-                name: "Suga / Agust D",
-                fullName: "Min Yoon-gi",
-                role: "Lead Rapper & Producer",
-                img: "https://i.pinimg.com/1200x/56/0a/88/560a88f261eee8e6ed8b61dc46022a8c.jpg",
-                quote: "‘Life is tough, and things don’t always work out well, but we should be brave and go on.’",
-                backstory: "Starting as an underground producer in Daegu, Yoongi sold beats just to afford food and bus fare. As Suga and Agust D, his raw lyrics tackle passion and triumph over hardship. Behind his stoic exterior lies an exceptionally caring soul who cooks for his members in silence and writes intimate piano ballads like 'First Love'.",
-                solos: "First Love, Seesaw, Interlude: Shadow, Daechwita, Haegeum",
-                eras: "The Most Beautiful Moment in Life, D-DAY World Tour, Agust D Trilogy",
-                quirks: "Gummy smile when genuinely happy, loves tangerine snacks, quiet and deeply attentive around loved ones.",
-                gfThought: "Like Yoongi's steady and subtle way of showing affection, you have that exact calm presence I trust completely."
-            },
-            {
-                id: "jhope",
-                name: "j-hope",
-                fullName: "Jung Ho-seok",
-                role: "Main Dancer & Rapper",
-                img: "https://i.pinimg.com/736x/99/25/da/9925daa33d668802ab3f2ac7b0332125.jpg",
-                quote: "‘I’m your hope, you’re my hope, I’m j-hope.’",
-                backstory: "Formerly a famous underground street dancer in Gwangju (Neuron), Hoseok is the structural backbone of BTS's stage performances. Known as the group's ray of sunshine, his solo album 'Jack In The Box' proved he is also a versatile, dark, and energetic visionary who headlined Lollapalooza as the first Korean artist to do so.",
-                solos: "Mama, Just Dance, Ego, More, Arson",
-                eras: "Mic Drop Center Hoseok, Lollapalooza 2022, Hope World",
-                quirks: "Makes cute sound effects when doing anything, extremely neat and organized, pouts his lips when focused.",
-                gfThought: "You light up every room you walk into. Your bright energy and drive are things I constantly admire."
-            },
-            {
-                id: "jimin",
-                name: "Jimin",
-                fullName: "Park Ji-min",
-                role: "Main Dancer & Lead Vocalist",
-                img: "https://i.pinimg.com/736x/ed/45/71/ed4571f66590af9f173d4517d40fd44f.jpg",
-                quote: "‘Remember there is a person here who understands you.’",
-                backstory: "A top modern dance student from Busan High School of Arts, Jimin trained rigorously to master both contemporary grace and powerful K-pop choreography. Famous for his high notes and emotive stage presence in 'Lie' and 'Filter', Jimin is equally adored for his fierce loyalty—always being the first to run across the room to comfort a friend.",
-                solos: "Lie, Serendipity, Filter, Like Crazy, Set Me Free Pt.2",
-                eras: "Blood Sweat & Tears Era, Serendipity Intro, FACE Album Debut",
-                quirks: "Runs his hand through his hair constantly, laughs so hard he falls off chairs, deeply caring friend.",
-                gfThought: "Your tender heart, genuine empathy, and grace toward everyone around you reflect Jimin’s beautiful nature."
-            },
-            {
-                id: "v",
-                name: "V",
-                fullName: "Kim Tae-hyung",
-                role: "Vocalist & Visual",
-                img: "https://i.pinimg.com/736x/e7/db/04/e7db04880d9174260447a29cbd977c16.jpg",
-                quote: "‘Purple is the last color of the rainbow. It means I will trust and love you for a long time.’",
-                backstory: "Accidentally auditioning after supporting a friend, Taehyung’s deep baritone voice became one of BTS’s most distinct sonic signatures. A lover of vintage jazz, film photography, and classical art, V created the iconic phrase 'I Purple You' (Borahae). His solo album 'Layover' showed his soulful, laid-back artistic spirit.",
-                solos: "Stigma, Singularity, Inner Child, Winter Bear, Slow Dancing",
-                eras: "Singularity Feather Robe Solo, DNA Era Visuals, Layover Era",
-                quirks: "Boxy smile when laughing, loves vintage vinyl records and photography, uniquely creative thinker.",
-                gfThought: "Your artistic eye, unique taste, and classic, warm style are just as enchanting as Tae's vision."
-            },
-            {
-                id: "jungkook",
-                name: "Jungkook",
-                fullName: "Jeon Jung-kook",
-                role: "Main Vocalist & Center",
-                img: "https://i.pinimg.com/736x/71/66/31/716631f36b03b5ef562e01edbd3dae30.jpg",
-                quote: "‘Effort makes you. You will regret someday if you don’t do your best now.’",
-                backstory: "Scouted by 7 agencies at age 15, Jungkook chose BigHit simply because he thought RM was cool. Growing up surrounded by six older brothers, he absorbed their traits to become the 'Golden Maknae'—excelling in singing, dancing, video editing (G.C.F), drawing, and athletics. His solo single 'Seven' shattered global streaming records.",
-                solos: "Begin, Euphoria, My Time, Still With You, Seven, Standing Next to You",
-                eras: "Euphoria Flying Concert Solos, FIFA World Cup 'Dreamers', GOLDEN Era",
-                quirks: "Tilts his head when confused, loves boxing and editing videos, eats food with pure happiness.",
-                gfThought: "Your natural versatility and the way you pour your whole heart into everything remind me so much of Jungkook."
-            }
-        ];
-
-        // Audio Tracks Dataset (Track IDs added for clean indexing)
-        const audioTracks = [
-            {
-                id: 0,
-                title: "Euphoria",
-                album: "LOVE YOURSELF 結 'Answer'",
-                year: "2018",
-                era: "ly",
-                lyric: "You are the cause of my euphoria... Take my hands now.",
-                gfNote: "This track captures the weightless, bright happiness of simple moments spent together.",
-                cover: "https://images.unsplash.com/photo-1518895949257-7621c3c786d7?auto=format&fit=crop&w=600&q=80",
-                audioSrc: "BTS-Jungkook-Euphoria-SnapYT.App"
-            },
-            {
-                id: 1,
-                title: "Spring Day",
-                album: "YOU NEVER WALK ALONE",
-                year: "2017",
-                era: "hyyh",
-                lyric: "Passing by the edge of this cold winter... until the spring day comes again.",
-                gfNote: "A timeless reminder that no matter the distance or season, warmth always returns.",
-                cover: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=600&q=80",
-                audioSrc: "BTS-방탄소년단-Spring-SnapYT.App"
-            },
-            {
-                id: 2,
-                title: "Mikrokosmos",
-                album: "Map of the Soul: Persona",
-                year: "2019",
-                era: "mots",
-                lyric: "One history in one person, one star in one person... 7 billion light-years.",
-                gfNote: "Every individual is a starlight in the dark—just like you shine in my life.",
-                cover: "https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?auto=format&fit=crop&w=600&q=80",
-                audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3"
-            },
-            {
-                id: 3,
-                title: "Serendipity",
-                album: "LOVE YOURSELF 承 'Her'",
-                year: "2017",
-                era: "ly",
-                lyric: "The universe has moved for us, without missing a single thing.",
-                gfNote: "Soft, gentle, and dreamy—a melody that feels like a quiet evening together.",
-                cover: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80",
-                audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3"
-            }
-        ];
-
-        // Funny BTS Moments & Memes Dataset
-        const funnyMoments = [
-            {
-                title: "Jin's Infamous 'Worldwide Handsome'",
-                member: "Jin",
-                tag: "Iconic Self-Love",
-                img: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80",
-                desc: "When Jin was asked how he feels being Worldwide Handsome, he replied: 'I am handsome everywhere I go... even in my sleep!'",
-                caption: "Self-confidence level: Kim Seokjin 👑"
-            },
-            {
-                title: "Jungshook — Frozen in the Matrix",
-                member: "Jungkook",
-                tag: "Classic Meme",
-                img: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=600&q=80",
-                desc: "Jungkook spacing out during an English interview with wide open eyes, completely disconnected from reality.",
-                caption: "Brain.exe has stopped working 🤖"
-            },
-            {
-                title: "Suga's 'In Next Life I Want To Be A Rock'",
-                member: "Suga",
-                tag: "Relatable King",
-                img: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=600&q=80",
-                desc: "Yoongi declaring his ultimate life goal: 'I want to be born as a rock in my next life so I don't have to move at all.'",
-                caption: "The patron saint of weekend naps 🪨"
-            },
-            {
-                title: "Lachimolala!",
-                member: "Jimin & Jin",
-                tag: "Run BTS Chaos",
-                img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80",
-                desc: "During the whisper game, 'Carbonara' transformed into 'Lachimolala', and Jin somehow guessed Carbonara correctly anyway!",
-                caption: "Telepathy at its finest 🍜"
-            },
-            {
-                title: "Taehyung's TATA Mic Face",
-                member: "V (Taehyung)",
-                tag: "Master of Persuasion",
-                img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80",
-                desc: "Taehyung staring at the staff with cute pouty eyes to trick them into giving him the Bluetooth TATA microphone prize.",
-                caption: "100% success rate on bribing staff 🎤"
-            },
-            {
-                title: "Hobi vs. The Water Flume Ride",
-                member: "j-hope",
-                tag: "Screaming Sunshine",
-                img: "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=600&q=80",
-                desc: "Hoseok clinging for dear life on amusement park rides while emitting ultrasonic screams of sheer panic.",
-                caption: "Main dancer turned opera singer 🎢"
-            }
-        ];
-
-        // Random Funny Quotes
-        const memeQuotes = [
-            { quote: "You got no jams!", author: "RM to Jimin" },
-            { quote: "Hey, Jin Stob It!", author: "Jin during VLive" },
-            { quote: "I'm Worldwide Handsome, you know?", author: "Jin" },
-            { quote: "Infires man!", author: "Suga" },
-            { quote: "I like hamburger... and sprite!", author: "j-hope" },
-            { quote: "Important business!", author: "Jungkook dodging fans" },
-            { quote: "Not, not, NO!", author: "Taehyung in English" },
-            { quote: "Lachimolala!", author: "Jimin during Run BTS" }
-        ];
-
-        // 3D Flip Trivia Cards Dataset
-        const triviaCards = [
-            {
-                category: "Symbolism",
-                title: "Why 'Borahae' (I Purple You)?",
-                frontText: "Created by V during a 2016 fan meeting, purple is the last color of the rainbow.",
-                backNote: "Taehyung explained that purple means 'I will trust and love you for a long time.' It became the global symbol for BTS & ARMY!"
-            },
-            {
-                category: "Lore",
-                title: "Whalien 52",
-                frontText: "The song 'Whalien 52' is inspired by the 52-hertz whale—the world's lonely whale.",
-                backNote: "Singing at a frequency no other whale can hear, it represents youth feeling unheard until finding their tribe in ARMY."
-            },
-            {
-                category: "History",
-                title: "UN Speech Legacy",
-                frontText: "In 2018, RM delivered a speech at the United Nations for the Love Myself campaign.",
-                backNote: "‘No matter who you are, where you’re from, your skin color, gender identity: speak yourself.’"
-            }
-        ];
-
-        // Quiz Questions Dataset
-        const quizQuestions = [
-            {
-                q: "What does the phrase 'Borahae' (I Purple You) signify?",
-                options: ["To love and trust each other for a long time", "To dance until dawn", "To win a Grammy award", "To compose a piano melody"],
-                correct: 0
-            },
-            {
-                q: "Which member created the iconic BT21 character 'Tata' with a heart head?",
-                options: ["Jimin", "V (Taehyung)", "Jin", "j-hope"],
-                correct: 1
-            },
-            {
-                q: "What was BTS's official debut year?",
-                options: ["2011", "2013", "2015", "2017"],
-                correct: 1
-            },
-            {
-                q: "Which track is known as ARMY's official comfort anthem for cold seasons?",
-                options: ["Fire", "Spring Day", "Dope", "IDOL"],
-                correct: 1
-            }
-        ];
-
-        // Global State Variables
-        let currentTrackIdx = 0;
-        let isPlaying = false;
-        let currentQuizIdx = 0;
-        let quizScore = 0;
-        let audioElement;
-        let cozyAudioElement;
-        let isCozyPlaying = false;
-
-        // Initialize Application
-        window.addEventListener('DOMContentLoaded', () => {
-            audioElement = document.getElementById('audio-element');
-            cozyAudioElement = document.getElementById('cozy-bg-audio');
-            
-            initChibiBackground();
-            renderMembers();
-            renderTracklist(audioTracks);
-            renderFunnyGallery();
-            renderTriviaCards();
-            renderQuizQuestion();
-            loadTrack(0);
-            initAudioEngine();
-            switchTab('home');
-        });
-
-        // Cozy Audio Ambient Toggle
-        function toggleCozyAudio() {
-            const label = document.getElementById('cozy-audio-label');
-            const icon = document.getElementById('cozy-audio-icon');
-
-            if (isCozyPlaying) {
-                cozyAudioElement.pause();
-                isCozyPlaying = false;
-                label.innerText = 'Cozy Ambience: Off';
-                icon.className = 'fa-solid fa-music text-violet-300';
-            } else {
-                cozyAudioElement.volume = 0.35;
-                cozyAudioElement.play();
-                isCozyPlaying = true;
-                label.innerText = 'Cozy Ambience: On';
-                icon.className = 'fa-solid fa-music text-rose-300 animate-bounce';
-            }
-        }
-
-        // Floating Chibi Background Animation Engine
-        function initChibiBackground() {
-            const container = document.getElementById('chibi-bg');
-            if (!container) return;
-            const particleCount = 12;
-
-            for (let i = 0; i < particleCount; i++) {
-                const particle = document.createElement('div');
-                particle.className = 'chibi-particle';
-                particle.innerHTML = chibiSvgs[i % chibiSvgs.length];
-
-                const leftPos = Math.random() * 92;
-                const duration = 18 + Math.random() * 20;
-                const delay = Math.random() * 15;
-                const scale = 0.6 + Math.random() * 0.4;
-
-                particle.style.left = `${leftPos}%`;
-                particle.style.animationDuration = `${duration}s`;
-                particle.style.animationDelay = `-${delay}s`;
-                particle.style.transform = `scale(${scale})`;
-
-                container.appendChild(particle);
-            }
-        }
-
-        // Seamless Tab Switching
-        function switchTab(tabId) {
-            document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
-            
-            document.querySelectorAll('.nav-btn').forEach(btn => {
-                btn.classList.remove('bg-violet-600', 'text-white', 'shadow-md');
-                btn.classList.add('text-violet-300/70');
-            });
-
-            document.querySelectorAll('.mobile-nav-btn').forEach(btn => {
-                btn.classList.remove('text-violet-300');
-                btn.classList.add('text-violet-300/60');
-            });
-
-            const activePage = document.getElementById(`page-${tabId}`);
-            if (activePage) activePage.classList.remove('hidden');
-
-            const activeNav = document.getElementById(`nav-${tabId}`);
-            if (activeNav) {
-                activeNav.classList.add('bg-violet-600', 'text-white', 'shadow-md');
-                activeNav.classList.remove('text-violet-300/70');
-            }
-
-            const activeMobileNav = document.getElementById(`mobile-nav-${tabId}`);
-            if (activeMobileNav) {
-                activeMobileNav.classList.add('text-violet-300');
-                activeMobileNav.classList.remove('text-violet-300/60');
-            }
-
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-
-        // Render Page 1 Member Profile Cards
-        function renderMembers() {
-            const container = document.getElementById('members-container');
-            if (!container) return;
-
-            container.innerHTML = btsMembers.map((m, idx) => `
-                <div onclick="openMemberModal(${idx})" class="glass-panel glass-panel-hover rounded-3xl overflow-hidden border border-glassBorder flex flex-col justify-between cursor-pointer group">
-                    <div>
-                        <div class="relative h-80 overflow-hidden bg-violet-950">
-                            <img src="${m.img}" alt="${m.name}" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105">
-                            <div class="absolute inset-0 bg-gradient-to-t from-slateDark via-slateDark/20 to-transparent opacity-85"></div>
-                            
-                            <div class="absolute top-4 right-4 px-3 py-1 rounded-full bg-violet-950/80 border border-violet-400/30 text-[10px] font-mono text-violet-200 backdrop-blur-md opacity-0 group-hover:opacity-100 transition duration-300 flex items-center gap-1.5">
-                                <i class="fa-solid fa-expand text-[9px]"></i> Tap for Story
-                            </div>
-
-                            <div class="absolute bottom-4 left-4 right-4 flex justify-between items-end">
-                                <div>
-                                    <span class="text-[10px] font-mono uppercase tracking-widest text-violet-300 bg-violet-950/80 px-2.5 py-1 rounded-md border border-violet-500/30 backdrop-blur-md">
-                                        ${m.role}
-                                    </span>
-                                    <h3 class="font-romantic-heading font-bold text-2xl text-white mt-1.5">${m.name}</h3>
-                                    <p class="text-xs text-violet-300/70 font-mono">${m.fullName}</p>
+                        <div class="bear">
+                            <div class="bear-head">
+                                <div class="bear-ear left"></div>
+                                <div class="bear-ear right"></div>
+                                <div class="bear-face">
+                                    <div class="bear-eye left"></div>
+                                    <div class="bear-eye right"></div>
+                                    <div class="bear-nose"></div>
+                                    <div class="bear-mouth"></div>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="p-6 space-y-3">
-                            <p class="text-xs text-violet-100/80 italic font-light line-clamp-2">
-                                "${m.quote}"
-                            </p>
-                            <p class="text-xs text-violet-300/70 line-clamp-2 font-light leading-relaxed">
-                                ${m.backstory}
-                            </p>
+                            <div class="bear-body"></div>
+                            <div class="bear-arm left"><div class="bear-paw"></div></div>
+                            <div class="bear-arm right"><div class="bear-paw"></div></div>
                         </div>
                     </div>
 
-                    <div class="p-6 pt-0">
-                        <div class="py-2.5 px-4 rounded-xl bg-violet-900/20 border border-violet-400/20 text-xs text-violet-300 flex items-center justify-between group-hover:border-violet-400/40 transition">
-                            <span class="font-medium text-white">Read Full Backstory</span>
-                            <i class="fa-solid fa-arrow-right text-xs group-hover:translate-x-1 transition"></i>
-                        </div>
+                    <div class="bear-message">
+                        Someone sent a little bear<br>to wish you Happy Birthday!
+                        <span>Hope it made you smile a little ✨</span>
                     </div>
                 </div>
-            `).join('');
-        }
+            </section>
 
-        // Open Modal View
-        function openMemberModal(idx) {
-            const m = btsMembers[idx];
-            
-            document.getElementById('modal-member-img').src = m.img;
-            document.getElementById('modal-member-name').innerText = m.name;
-            document.getElementById('modal-member-fullname').innerText = m.fullName;
-            document.getElementById('modal-member-role').innerText = m.role;
-            document.getElementById('modal-member-quote').innerText = m.quote;
-            document.getElementById('modal-member-backstory').innerText = m.backstory;
-            document.getElementById('modal-member-solos').innerText = m.solos;
-            document.getElementById('modal-member-eras').innerText = m.eras;
-            document.getElementById('modal-member-quirks').innerText = m.quirks;
-            document.getElementById('modal-member-gf').innerText = m.gfThought;
+            <!-- PAGE 6: Final Letter -->
+            <section class="page" id="page6">
+                <div class="corner tl"></div><div class="corner tr"></div>
 
-            const modal = document.getElementById('member-modal');
-            modal.classList.remove('opacity-0', 'pointer-events-none');
-            document.body.style.overflow = 'hidden';
-        }
+                <div class="letter-header reveal">
+                    <h2>Dear Fluffy</h2>
+                    <p class="letter-date">14 November</p>
+                </div>
 
-        function closeMemberModal() {
-            const modal = document.getElementById('member-modal');
-            modal.classList.add('opacity-0', 'pointer-events-none');
-            document.body.style.overflow = 'auto';
-        }
+                <div class="letter-body reveal" style="--d:.2s">
+                    <p>
+                        Happy Birthday.
+                    </p>
+                    <p>
+                        I hope this year is kinder to you than the last.
+                        I hope the stories you read keep giving you new worlds,
+                        and that the real one treats you gently too.
+                    </p>
+                    <p>
+                        I’m proud of the way you chose focus when it mattered.
+                        Getting that A+ wasn’t just a result — it was a quiet kind of strength.
+                    </p>
+                    <p>
+                        Wherever life takes you from here,
+                        I hope you keep becoming someone you’re proud of.
+                    </p>
+                    <p>
+                        That’s all I wanted to say.
+                    </p>
+                </div>
 
-        // Render Page 3 BTS Funny Gallery Cards
-        function renderFunnyGallery() {
-            const container = document.getElementById('funny-gallery-container');
-            if (!container) return;
-
-            container.innerHTML = funnyMoments.map(m => `
-                <div class="glass-panel glass-panel-hover rounded-3xl overflow-hidden border border-amber-400/20 flex flex-col justify-between">
-                    <div>
-                        <div class="relative h-60 overflow-hidden bg-violet-950">
-                            <img src="${m.img}" alt="${m.title}" class="w-full h-full object-cover">
-                            <div class="absolute inset-0 bg-gradient-to-t from-slateDark via-transparent to-transparent"></div>
-                            <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-slateDark/80 border border-amber-400/30 text-[10px] font-mono text-amber-300">
-                                ${m.tag}
-                            </span>
-                            <div class="absolute bottom-3 left-3 right-3">
-                                <span class="text-[10px] font-mono text-violet-300/80 uppercase tracking-widest">${m.member}</span>
-                                <h4 class="font-romantic-heading font-bold text-xl text-white mt-0.5">${m.title}</h4>
-                            </div>
-                        </div>
-                        <div class="p-5 space-y-3">
-                            <p class="text-xs text-violet-100/80 font-light leading-relaxed">${m.desc}</p>
-                        </div>
-                    </div>
-                    <div class="p-5 pt-0">
-                        <div class="p-3 rounded-xl bg-amber-400/10 border border-amber-400/20 text-xs text-amber-200 font-mono italic text-center">
-                            "${m.caption}"
-                        </div>
+                <div class="photo-gallery reveal" style="--d:.35s">
+                    <div class="photo-frame">
+                        <img src="images/fluffy.jpg" alt="Fluffy" width="360" height="480" decoding="async">
                     </div>
                 </div>
-            `).join('');
+
+                <div class="letter-closing reveal" style="--d:.45s">
+                    <p>With quiet warmth,</p>
+                    <p class="letter-signature">secret</p>
+                </div>
+            </section>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="nav" id="nav" hidden>
+            <button type="button" class="nav-btn" id="prevBtn" disabled aria-label="Previous page">← Previous</button>
+            <span class="page-indicator" id="pageIndicator" aria-live="polite">1 / 6</span>
+            <button type="button" class="nav-btn" id="nextBtn" aria-label="Next page">Next →</button>
+        </nav>
+    </main>
+
+    <script>
+    (() => {
+        'use strict';
+
+        const PASSWORD = '2010';
+        const MAX_NO_CLICKS = 6;
+
+        const $ = (id) => document.getElementById(id);
+        const pages = [...document.querySelectorAll('.page')];
+        const total = pages.length;
+
+        const lockScreen = $('lockScreen');
+        const lockForm   = $('lockForm');
+        const input      = $('passwordInput');
+        const lockError  = $('lockError');
+        const nav        = $('nav');
+        const prevBtn    = $('prevBtn');
+        const nextBtn    = $('nextBtn');
+        const indicator  = $('pageIndicator');
+        const choices    = $('choices');
+        const noBtn      = $('noBtn');
+
+        let current = 0;          // zero-based index
+        let unlocked = false;
+        let yesClicked = false;
+        let noClicks = 0;
+        let errorTimer;
+
+        /* ---------- Lock ---------- */
+        lockForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            if (input.value === PASSWORD) {
+                unlocked = true;
+                input.blur();                         // closes the mobile keyboard
+                lockScreen.classList.add('hidden');
+                setMusic(true);                       // must happen inside this tap
+                setTimeout(() => {
+                    nav.hidden = false;
+                    musicBtn.hidden = false;
+                    show(0);
+                }, 400);
+            } else {
+                lockError.classList.add('show');
+                input.value = '';
+                input.focus();
+                clearTimeout(errorTimer);
+                errorTimer = setTimeout(() => lockError.classList.remove('show'), 2000);
+            }
+        });
+
+        /* ---------- Music ---------- */
+        // Put your own song at audio/music.mp3 and it plays automatically.
+        // If that file isn't there, a built-in music-box "Happy Birthday" plays instead.
+        // Set MUSIC_FILE to '' to always use the built-in tune.
+        const MUSIC_FILE = 'audio/music.mp3';
+        const musicBtn = $('musicBtn');
+        const bgm = $('bgm');
+        let wantMusic = false;     // what the listener chose (button state)
+        let source = null;         // 'file' | 'synth'
+        let ctx = null, master = null, loopTimer = null;
+
+        if (MUSIC_FILE) { bgm.src = MUSIC_FILE; bgm.volume = 0.6; }
+
+        // Happy Birthday: [frequency in Hz, length in beats]
+        const BEAT = 0.58;
+        const TUNE = [
+            [392, .75], [392, .25], [440, 1], [392, 1], [523.25, 1], [493.88, 2],
+            [392, .75], [392, .25], [440, 1], [392, 1], [587.33, 1], [523.25, 2],
+            [392, .75], [392, .25], [783.99, 1], [659.25, 1], [523.25, 1], [493.88, 1], [440, 1],
+            [698.46, .75], [698.46, .25], [659.25, 1], [523.25, 1], [587.33, 1], [523.25, 2]
+        ];
+
+        function pluck(freq, when, beats) {
+            const len = Math.max(beats * BEAT, 0.6) * 1.4;
+            const body = ctx.createOscillator(), shine = ctx.createOscillator();
+            const env = ctx.createGain(), shineGain = ctx.createGain();
+            body.type = 'triangle';  body.frequency.value = freq;
+            shine.type = 'sine';     shine.frequency.value = freq * 2;
+            shineGain.gain.value = 0.25;
+            env.gain.setValueAtTime(0, when);
+            env.gain.linearRampToValueAtTime(0.6, when + 0.01);
+            env.gain.exponentialRampToValueAtTime(0.001, when + len);
+            body.connect(env); shine.connect(shineGain); shineGain.connect(env); env.connect(master);
+            body.start(when);  shine.start(when);
+            body.stop(when + len + 0.05); shine.stop(when + len + 0.05);
         }
 
-        function generateRandomMemeQuote() {
-            const rand = memeQuotes[Math.floor(Math.random() * memeQuotes.length)];
-            document.getElementById('meme-quote-display').innerText = `"${rand.quote}"`;
-            document.getElementById('meme-author-display').innerText = `— ${rand.author}`;
+        function playTune() {
+            let t = ctx.currentTime + 0.05;
+            for (const [freq, beats] of TUNE) { pluck(freq, t, beats); t += beats * BEAT; }
+            loopTimer = setTimeout(playTune, (t - ctx.currentTime + 2.5) * 1000);   // pause, then repeat
         }
 
-        // Audio Player Controls
-        function initAudioEngine() {
-            audioElement.addEventListener('timeupdate', () => {
-                if (!audioElement.duration) return;
-                const pct = (audioElement.currentTime / audioElement.duration) * 100;
-                document.getElementById('audio-seek').value = pct;
-                document.getElementById('audio-time-curr').innerText = formatTime(audioElement.currentTime);
-                document.getElementById('audio-time-dur').innerText = formatTime(audioElement.duration);
+        function startSynth() {
+            const AC = window.AudioContext || window.webkitAudioContext;
+            if (!AC) return;
+            ctx = ctx || new AC();
+            ctx.resume();
+            master = ctx.createGain();
+            master.gain.value = 0.2;
+            master.connect(ctx.destination);
+            playTune();
+        }
+
+        function stopSynth() {
+            clearTimeout(loopTimer);
+            if (master) { master.disconnect(); master = null; }   // silences anything already scheduled
+            if (ctx) ctx.suspend();
+        }
+
+        function resumeOutput() {
+            if (source === 'synth') return startSynth();
+            bgm.play().then(() => { source = 'file'; if (!wantMusic) bgm.pause(); })
+                      .catch(() => { source = 'synth'; if (wantMusic) startSynth(); });   // no mp3 found -> built-in tune
+        }
+
+        function pauseOutput() {
+            if (source === 'synth') stopSynth(); else bgm.pause();
+        }
+
+        function setMusic(on) {
+            wantMusic = on;
+            musicBtn.classList.toggle('off', !on);
+            musicBtn.setAttribute('aria-pressed', on);
+            if (on) resumeOutput(); else pauseOutput();
+        }
+
+        musicBtn.addEventListener('click', () => setMusic(!wantMusic));
+
+        // Don't play on in a background tab or after the screen locks
+        document.addEventListener('visibilitychange', () => {
+            if (!wantMusic) return;
+            if (document.hidden) pauseOutput(); else resumeOutput();
+        });
+
+        /* ---------- Page 2: Yes / No ---------- */
+        $('yesBtn').addEventListener('click', () => {
+            yesClicked = true;
+            go(1);
+        });
+
+        noBtn.addEventListener('click', () => {
+            noClicks++;
+            choices.style.setProperty('--n', noClicks);   // CSS handles all the sizing
+            if (noClicks >= MAX_NO_CLICKS) noBtn.classList.add('gone');
+        });
+
+        /* ---------- Navigation ---------- */
+        function canLeave(index) {
+            // Page 2 (index 1) is gated until "Yes" is pressed
+            return index !== 1 || yesClicked;
+        }
+
+        function show(index) {
+            current = index;
+
+            pages.forEach((page, i) => {
+                page.classList.toggle('active', i === current);
+                page.classList.toggle('prev', i < current);
             });
 
-            audioElement.addEventListener('ended', () => {
-                nextTrack();
-            });
+            pages[current].scrollTop = 0;
+            prevBtn.disabled = current === 0;
+            nextBtn.disabled = current === total - 1 || !canLeave(current);
+            indicator.textContent = `${current + 1} / ${total}`;
         }
 
-        function loadTrack(idx) {
-            currentTrackIdx = idx;
-            const track = audioTracks[idx];
-            if (!track) return;
-
-            audioElement.src = track.audioUrl;
-
-            // Instantly update active track display elements on Page 2
-            document.getElementById('active-track-title').innerText = track.title;
-            document.getElementById('active-track-album').innerText = `${track.album} (${track.year})`;
-            document.getElementById('active-track-art').src = track.cover;
-            document.getElementById('active-track-lyric').innerText = `"${track.lyric}"`;
-            document.getElementById('active-track-note').innerText = track.gfNote;
-            document.getElementById('active-track-era').innerText = `${track.era.toUpperCase()} ERA`;
-
-            // Highlight active song in playlist
-            renderTracklist(audioTracks);
-
-            if (isPlaying) {
-                audioElement.play().catch(e => console.log('Audio play error:', e));
-            }
+        function go(direction) {
+            if (!unlocked) return;
+            const next = current + direction;
+            if (next < 0 || next >= total) return;
+            if (direction > 0 && !canLeave(current)) return;
+            show(next);
         }
 
-        function togglePlayPause() {
-            const btnIcon = document.getElementById('main-play-icon');
-            if (isPlaying) {
-                audioElement.pause();
-                isPlaying = false;
-                btnIcon.className = 'fa-solid fa-play text-sm ml-0.5';
-            } else {
-                audioElement.play();
-                isPlaying = true;
-                btnIcon.className = 'fa-solid fa-pause text-sm';
-            }
-        }
+        prevBtn.addEventListener('click', () => go(-1));
+        nextBtn.addEventListener('click', () => go(1));
 
-        function prevTrack() {
-            currentTrackIdx = (currentTrackIdx - 1 + audioTracks.length) % audioTracks.length;
-            loadTrack(currentTrackIdx);
-        }
+        document.addEventListener('keydown', (e) => {
+            if (e.target === input) return;
+            if (e.key === 'ArrowRight') go(1);
+            if (e.key === 'ArrowLeft')  go(-1);
+        });
 
-        function nextTrack() {
-            currentTrackIdx = (currentTrackIdx + 1) % audioTracks.length;
-            loadTrack(currentTrackIdx);
-        }
+        /* ---------- Swipe (mobile) ---------- */
+        let startX = 0, startY = 0, tracking = false;
+        const stage = $('stage');
 
-        function seekAudioTrack(val) {
-            if (audioElement.duration) {
-                audioElement.currentTime = (val / 100) * audioElement.duration;
-            }
-        }
+        stage.addEventListener('touchstart', (e) => {
+            if (e.touches.length !== 1) return;
+            tracking = true;
+            startX = e.touches[0].clientX;
+            startY = e.touches[0].clientY;
+        }, { passive: true });
 
-        function adjustVolume(val) {
-            audioElement.volume = val;
-        }
-
-        function toggleAudioMute() {
-            const icon = document.getElementById('mute-icon');
-            audioElement.muted = !audioElement.muted;
-            icon.className = audioElement.muted ? 'fa-solid fa-volume-xmark' : 'fa-solid fa-volume-high';
-        }
-
-        function formatTime(sec) {
-            if (isNaN(sec)) return "0:00";
-            const m = Math.floor(sec / 60);
-            const s = Math.floor(sec % 60);
-            return `${m}:${s < 10 ? '0' : ''}${s}`;
-        }
-
-        function renderTracklist(tracks) {
-            const container = document.getElementById('tracklist-container');
-            if (!container) return;
-
-            container.innerHTML = tracks.map((t) => {
-                const isSelected = t.id === currentTrackIdx;
-                return `
-                    <div onclick="selectTrack(${t.id})" class="glass-panel glass-panel-hover rounded-2xl p-4 flex items-center gap-4 cursor-pointer border ${isSelected ? 'border-violet-400 bg-violet-900/40 shadow-lg' : 'border-glassBorder'} group">
-                        <img src="${t.cover}" alt="${t.title}" class="w-16 h-16 rounded-xl object-cover flex-shrink-0">
-                        <div class="flex-grow min-w-0">
-                            <span class="text-[9px] font-mono uppercase tracking-wider text-violet-300/60">${t.album}</span>
-                            <h4 class="font-romantic-heading font-bold text-lg text-white truncate ${isSelected ? 'text-violet-300' : 'group-hover:text-violet-300'} transition">${t.title}</h4>
-                            <p class="text-xs text-violet-300/60 truncate mt-0.5">${t.lyric}</p>
-                        </div>
-                        <button class="w-10 h-10 rounded-full ${isSelected ? 'bg-violet-500 text-white' : 'bg-violet-950 border border-violet-400/30 text-violet-200'} flex items-center justify-center group-hover:bg-violet-600 group-hover:text-white transition">
-                            <i class="fa-solid ${isSelected && isPlaying ? 'fa-pause' : 'fa-play'} text-xs"></i>
-                        </button>
-                    </div>
-                `;
-            }).join('');
-        }
-
-        function selectTrack(i) {
-            isPlaying = true;
-            document.getElementById('main-play-icon').className = 'fa-solid fa-pause text-sm';
-            loadTrack(i);
-            // Scroll smoothly to player box on mobile/desktop for instant focus
-            const playerBox = document.getElementById('active-track-title');
-            if (playerBox) {
-                playerBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            }
-        }
-
-        function filterEra(era, btnEl) {
-            document.querySelectorAll('.era-btn').forEach(b => {
-                b.classList.remove('bg-violet-600', 'text-white');
-                b.classList.add('glass-panel', 'text-violet-200');
-            });
-            btnEl.classList.add('bg-violet-600', 'text-white');
-            btnEl.classList.remove('glass-panel');
-
-            if (era === 'all') {
-                renderTracklist(audioTracks);
-            } else {
-                const filtered = audioTracks.filter(t => t.era === era);
-                renderTracklist(filtered);
-            }
-        }
-
-        // 3D Flip Cards Rendering
-        function renderTriviaCards() {
-            const container = document.getElementById('flip-cards-container');
-            if (!container) return;
-
-            container.innerHTML = triviaCards.map((c, i) => `
-                <div class="perspective-1000 h-56 cursor-pointer" onclick="flipTriviaCard(${i})">
-                    <div id="trivia-card-${i}" class="transform-style-3d relative w-full h-full rounded-2xl shadow-xl transition-all duration-500">
-                        <div class="absolute inset-0 backface-hidden glass-panel border border-glassBorder rounded-2xl p-6 flex flex-col justify-between">
-                            <div>
-                                <span class="text-[10px] font-mono uppercase tracking-wider text-violet-300 bg-violet-950/60 px-2.5 py-1 rounded-md border border-violet-500/20">${c.category}</span>
-                                <h4 class="font-romantic-heading font-bold text-xl text-white mt-3">${c.title}</h4>
-                                <p class="text-xs text-violet-100/80 mt-2 font-light leading-relaxed">${c.frontText}</p>
-                            </div>
-                            <span class="text-[10px] font-mono text-violet-300/60 flex items-center gap-1">
-                                <i class="fa-solid fa-rotate text-[10px]"></i> Tap to flip card
-                            </span>
-                        </div>
-                        <div class="absolute inset-0 backface-hidden rotate-y-180 bg-gradient-to-br from-violet-950 to-slateDark border border-violet-400/30 rounded-2xl p-6 flex flex-col justify-center text-center">
-                            <p class="text-xs sm:text-sm text-violet-200 leading-relaxed italic font-light">${c.backNote}</p>
-                        </div>
-                    </div>
-                </div>
-            `).join('');
-        }
-
-        function flipTriviaCard(i) {
-            const card = document.getElementById(`trivia-card-${i}`);
-            if (card) card.classList.toggle('rotate-y-180');
-        }
-
-        // Quiz Logic
-        function renderQuizQuestion() {
-            const container = document.getElementById('quiz-container');
-            const progress = document.getElementById('quiz-progress');
-            if (!container) return;
-
-            if (currentQuizIdx >= quizQuestions.length) {
-                showQuizResults();
-                return;
-            }
-
-            const q = quizQuestions[currentQuizIdx];
-            progress.innerText = `Question ${currentQuizIdx + 1} of ${quizQuestions.length}`;
-
-            container.innerHTML = `
-                <div class="space-y-4">
-                    <h4 class="font-romantic-heading font-semibold text-xl text-white">${q.q}</h4>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                        ${q.options.map((opt, idx) => `
-                            <button onclick="handleAnswer(${idx})" class="p-4 rounded-xl glass-panel hover:border-violet-400 text-left text-xs text-violet-100 transition flex items-center justify-between group">
-                                <span>${opt}</span>
-                                <i class="fa-regular fa-circle text-violet-400/50 group-hover:text-violet-300"></i>
-                            </button>
-                        `).join('')}
-                    </div>
-                </div>
-            `;
-        }
-
-        function handleAnswer(idx) {
-            if (idx === quizQuestions[currentQuizIdx].correct) {
-                quizScore++;
-            }
-            currentQuizIdx++;
-            renderQuizQuestion();
-        }
-
-        function showQuizResults() {
-            document.getElementById('quiz-container').classList.add('hidden');
-            const scoreBox = document.getElementById('quiz-score-box');
-            scoreBox.classList.remove('hidden');
-
-            const title = document.getElementById('quiz-score-title');
-            const msg = document.getElementById('quiz-score-msg');
-
-            title.innerText = `You Scored ${quizScore} / ${quizQuestions.length}!`;
-            if (quizScore === quizQuestions.length) {
-                msg.innerText = "Certified Ultimate ARMY! You know BTS inside out. Your devotion to their music and story is truly unmatched! ✨💜";
-            } else {
-                msg.innerText = "Great job! You know your BTS lore well. Every step of learning their journey brings so much joy!";
-            }
-        }
-
-        function resetQuiz() {
-            currentQuizIdx = 0;
-            quizScore = 0;
-            document.getElementById('quiz-container').classList.remove('hidden');
-            document.getElementById('quiz-score-box').classList.add('hidden');
-            renderQuizQuestion();
-        }
-
-        // Lockbox Logic
-        function unlockLockbox() {
-            const pin = document.getElementById('lockbox-pin').value;
-            const content = document.getElementById('lockbox-content');
-            const icon = document.getElementById('lockbox-icon');
-
-            if (pin === '2013') {
-                content.classList.remove('hidden');
-                icon.className = 'fa-solid fa-lock-open text-violet-300';
-            } else {
-                alert("Incorrect PIN! Hint: Enter the year BTS debuted (2013).");
-            }
-        }
+        stage.addEventListener('touchend', (e) => {
+            if (!tracking) return;
+            tracking = false;
+            const dx = e.changedTouches[0].clientX - startX;
+            const dy = e.changedTouches[0].clientY - startY;
+            // clearly horizontal, long enough, and not a vertical scroll
+            if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) go(dx < 0 ? 1 : -1);
+        }, { passive: true });
+    })();
     </script>
 </body>
 </html>

@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="theme-color" content="#e1bee7">
     <meta name="robots" content="noindex, nofollow">
+
+    <!-- Link preview (WhatsApp / Instagram / Messenger): text only, deliberately no image -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="A little surprise ✨">
+    <meta property="og:description" content="Tap to open.">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="A little surprise ✨">
+    <meta name="twitter:description" content="Tap to open.">
     <title>For Fluffy — 14 November</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -968,9 +976,7 @@
                 </div>
 
                 <div class="photo-gallery reveal" style="--d:.4s">
-                    <div class="photo-frame">
-                        <img src="images/fluffy.jpg" alt="Fluffy" width="360" height="480" decoding="async">
-                    </div>
+                    <div class="photo-frame" id="photoFrame"></div>
                 </div>
 
                 <div class="letter-closing reveal" style="--d:.45s">
@@ -1016,6 +1022,22 @@
         let noClicks = 0;
         let errorTimer;
 
+        /* ---------- Photo: added by script after unlocking ---------- */
+        // Not written into the HTML, so link-preview scrapers (WhatsApp, Instagram...)
+        // and people who only open the link never see or fetch it.
+        const PHOTO = 'images/fluffy.jpg';
+        function loadPhoto() {
+            const frame = $('photoFrame');
+            if (!frame || frame.firstChild) return;
+            const img = new Image();
+            img.alt = 'Fluffy';
+            img.width = 360;
+            img.height = 480;
+            img.decoding = 'async';
+            img.src = PHOTO;
+            frame.appendChild(img);
+        }
+
         /* ---------- Lock ---------- */
         lockForm.addEventListener('submit', (e) => {
             e.preventDefault();
@@ -1024,6 +1046,7 @@
                 unlocked = true;
                 input.blur();                         // closes the mobile keyboard
                 lockScreen.classList.add('hidden');
+                loadPhoto();
                 setMusic(true);                       // must happen inside this tap
                 setTimeout(() => {
                     nav.hidden = false;
